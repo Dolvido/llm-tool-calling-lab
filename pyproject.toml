@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-tool-calling-lab"
+version = "0.1.0"
+description = "Local conversational ML tools with inspectable evidence and reproducible evaluation"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+dependencies = ["numpy>=2,<3", "pandas>=2.2,<4", "scikit-learn>=1.6,<2", "pydantic>=2.10,<3", "streamlit>=1.45,<2", "ollama>=0.5,<1", "joblib>=1.4,<2", "threadpoolctl>=3.5,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "build>=1,<2"]
+
+[project.scripts]
+lab = "llm_tool_calling_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

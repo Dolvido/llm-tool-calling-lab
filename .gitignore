@@ -1,0 +1,16 @@
+.venv/
+.venv-verify/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.lab/
+.env
+*.log
+AGENTS.md
+SOURCE_CHAT.md
+ARCHIVE_*.md
+PRESENTATION_WORKFLOW.md
+presentation/
