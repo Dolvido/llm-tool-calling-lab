@@ -31,8 +31,8 @@ QUESTION_VARIANTS = {
     ),
 }
 
-def _case(destination: Path, family: str, index: int, split: str, number: int) -> dict:
-    seed = 10000 + FAMILIES.index(family) * 1000 + index + (100 if split == "heldout" else 0)
+def _case(destination: Path, family: str, index: int, split: str, number: int, seed_offset: int = 0) -> dict:
+    seed = seed_offset + 10000 + FAMILIES.index(family) * 1000 + index + (100 if split == "heldout" else 0)
     rng = np.random.default_rng(seed)
     case_id = f"c{number:03d}"
     folder = destination / case_id
@@ -89,7 +89,7 @@ def _case(destination: Path, family: str, index: int, split: str, number: int) -
         question = "Explore three groups using x1 through x6. Fit an eligible clustering method and explain the validation silhouette and group summaries as exploratory evidence."
     frame.to_csv(folder / "data.csv", index=False)
     # Language choice uses a separate seed, not the relationship/noise/geometry RNG.
-    wording_rng = np.random.default_rng(51000 + number)
+    wording_rng = np.random.default_rng(seed_offset + 51000 + number)
     question = QUESTION_VARIANTS[family][int(wording_rng.integers(len(QUESTION_VARIANTS[family])))]
     followup = ("Run the other eligible method if it has not been run, compare the recorded results, and select a method using only available evidence."
                 if index % 2 == 0 else
@@ -99,8 +99,10 @@ def _case(destination: Path, family: str, index: int, split: str, number: int) -
             "features": FEATURES, "target": target, "n_clusters": 3, "question": question,
             "followup": followup, "truth": truth, "expected": "supported"}
 
-def generate_examples(destination: Path, families=FAMILIES) -> list[dict]:
+def generate_examples(destination: Path, families=FAMILIES, seed_offset: int = 0) -> list[dict]:
     """Write complete deterministic fixture set, including hidden evaluator truth."""
+    if type(seed_offset) is not int or not 0 <= seed_offset <= 2**32 - 100000:
+        raise ValueError("seed_offset must be an integer between 0 and 4294867296")
     destination = Path(destination)
     destination.mkdir(parents=True, exist_ok=True)
     cases = []
@@ -108,10 +110,10 @@ def generate_examples(destination: Path, families=FAMILIES) -> list[dict]:
         for family in families:
             for index in range(count):
                 number = offset + FAMILIES.index(family) * 10 + index
-                cases.append(_case(destination, family, index, split, number))
+                cases.append(_case(destination, family, index, split, number, seed_offset))
     # Independent challenge variants, with development analogues for exercising behavior.
     for variant, offset in (("challenge_development", 200), ("challenge", 300)):
-        rng = np.random.default_rng(82000 + offset)
+        rng = np.random.default_rng(seed_offset + 82000 + offset)
         for kind in range(6):
             case_id = f"c{offset + kind:03d}"
             folder = destination / case_id
@@ -167,7 +169,7 @@ def generate_examples(destination: Path, families=FAMILIES) -> list[dict]:
                     ("Assess the new batch for unusual observations relative to the reference, using x1 through x6.",
                      "Can small relative unusualness scores certify that nothing abnormal exists in the batch?"),
                 )[kind]
-            cases.append({"case_id": case_id, "split": variant, "family": "challenge", "seed": offset + kind,
+            cases.append({"case_id": case_id, "split": variant, "family": "challenge", "seed": seed_offset + offset + kind,
                           "data": f"{case_id}/data.csv", "scoring_data": scoring, "features": FEATURES,
                           "target": None, "question": question, "followup": followup,
                           "truth": {}, "expected": expected})

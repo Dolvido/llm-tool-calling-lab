@@ -51,19 +51,19 @@ def backend_identity(config):
         raise ValueError(f"Configured model is not installed: {config.model}")
     return {"model": config.model, "digest": model["digest"], "size": model.get("size")}
 
-def freeze(destination: Path, config: LabConfig, families=FAMILIES, identity=None) -> Path:
-    destination = Path(destination)
+def freeze(destination: Path, config: LabConfig, families=FAMILIES, identity=None, seed_offset: int = 0) -> Path:
+    destination = Path(destination).resolve()
     if getattr(config, "catalog", "default") != "default":
         raise ValueError("Benchmark campaigns require the default catalog; the tutorial is evaluated separately")
     if (destination / "manifest.json").exists():
         raise ValueError("Campaign already frozen; use a new destination for another version")
     if len(set(families)) != len(families) or any(f not in FAMILIES for f in families):
         raise ValueError("Invalid or duplicate family")
-    cases = generate_examples(destination / "fixtures", families)
+    cases = generate_examples(destination / "fixtures", families, seed_offset=seed_offset)
     fixture_hashes = {str(p.relative_to(destination)).replace("\\", "/"): _digest(p)
                       for p in sorted((destination / "fixtures").rglob("*")) if p.is_file()}
     manifest = {"schema_version": 1, "created_utc": datetime.now(timezone.utc).isoformat(),
-                "families": list(families), "config": config.model_dump(),
+                "families": list(families), "config": config.model_dump(), "seed_offset": seed_offset,
                 "backend": identity or backend_identity(config), "python": sys.version,
                 "packages": package_versions(), "sources": source_fingerprints(),
                 "fixture_hashes": fixture_hashes, "rubric": RUBRIC,
@@ -74,7 +74,7 @@ def freeze(destination: Path, config: LabConfig, families=FAMILIES, identity=Non
     return destination / "manifest.json"
 
 def verify_freeze(destination: Path, check_backend=True):
-    destination = Path(destination)
+    destination = Path(destination).resolve()
     manifest = _read(destination / "manifest.json")
     if source_fingerprints() != manifest["sources"]:
         raise ValueError("Evaluated source changed after freeze; create a new campaign, preserving the old one")
@@ -90,7 +90,7 @@ def verify_freeze(destination: Path, check_backend=True):
 @contextmanager
 def _campaign_lock(destination):
     # OS file locks release on process death and protect resume from duplicate writers.
-    path = Path(destination) / ".runner.lock"
+    path = Path(destination).resolve() / ".runner.lock"
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("a+b") as handle:
         handle.seek(0)
@@ -166,7 +166,7 @@ def run_campaign(destination: Path, split="development", limit=None, backend_fac
     """Resume by episode ID; failed/interrupted attempts remain, never silently rerun."""
     from .models import ModelService
     from .chat import Session
-    destination = Path(destination)
+    destination = Path(destination).resolve()
     with _campaign_lock(destination):
         manifest = verify_freeze(destination, check_backend=backend_factory is None)
         if split not in manifest["repeats"]:
@@ -240,7 +240,7 @@ def review_episode(destination: Path, episode_id: str, checks: dict, reviewer: s
         raise ValueError("Review requires identity, human/AI label, and rationale")
     if not episode_id.replace("_", "").isalnum():
         raise ValueError("Invalid episode ID")
-    path = Path(destination) / "records" / (episode_id + ".json")
+    path = Path(destination).resolve() / "records" / (episode_id + ".json")
     record = _read(path)
     required = RUBRIC["challenge" if record["family"] == "challenge" else "supported"]
     if set(checks) != set(required) or not all(type(v) is bool for v in checks.values()):
@@ -303,7 +303,7 @@ def _paired_completion(records, manifest):
 
 
 def write_report(destination: Path) -> Path:
-    destination = Path(destination)
+    destination = Path(destination).resolve()
     manifest = _read(destination / "manifest.json")
     records = [_read(p) for p in sorted((destination / "records").glob("*.json"))]
     groups = defaultdict(list)

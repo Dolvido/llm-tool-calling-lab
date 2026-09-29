@@ -79,6 +79,8 @@ else:
     for message in st.session_state.lab_history:
         with st.chat_message(message["role"]):
             st.write(message["content"])
+            if message.get("row_ids"):
+                st.write("Selected row IDs: " + ", ".join(message["row_ids"]))
             if message.get("next_action"):
                 st.caption("Next step: " + message["next_action"])
             for evidence in message.get("evidence", []):
@@ -98,7 +100,8 @@ else:
         with st.spinner("Checking the question and working with the available evidence…"):
             response = session.respond(prompt, *st.session_state.lab_ids)
         st.session_state.lab_history.append({"role": "assistant", "content": response["answer"],
-            "next_action": response.get("next_action", ""), "evidence": response.get("evidence", [])})
+            "next_action": response.get("next_action", ""), "evidence": response.get("evidence", []),
+            "row_ids": response.get("row_ids", [])})
         st.rerun()
     st.caption(f"Episode usage: {session.state['fits']}/{config.max_fits} fits · {session.state['tool_calls']}/{config.max_tool_calls} tools · {session.state['llm_responses']}/{config.max_llm_responses} model responses")
     st.download_button("Download this episode", session.path.read_text(encoding="utf-8"), file_name=session.path.name, mime="application/json")

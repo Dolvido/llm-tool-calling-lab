@@ -239,3 +239,52 @@ def test_anomaly_primary_requires_four_actual_answer_ids():
     response = {"status": "ok", "selected_run_id": "run_real", "evidence": [], "row_ids": ["0", "1", "2", "99"]}
     result = ev._machine_checks(case, [response, response], service, session, "reference", "batch")
     assert result["errors"] == ["invalid_anomaly_answer_ids"]
+
+
+def test_relative_campaign_path_runs_real_service_and_session(tmp_path, monkeypatch):
+    """Exercise the CLI-style relative path with real absolute artifact roots."""
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(ev, "package_versions", lambda: {"test-runtime": "1"})
+    monkeypatch.setattr(ev, "backend_identity", lambda config: {"model": config.model, "digest": "test"})
+    destination = Path("relative-campaign")
+    manifest_path = ev.freeze(destination, LabConfig(), families=("regression",), seed_offset=100000)
+    assert manifest_path.is_absolute()
+    ClarificationBackend.requests = []
+    # A challenge requiring clarification exercises actual data registration and
+    # Session persistence without spending model fits or invoking Ollama.
+    assert ev.run_campaign(destination, "challenge", limit=1, backend_factory=fake_backend) == 1
+    record_path = destination / "records" / "c300_generic_0.json"
+    record = ev._read(record_path)
+    assert record["status"] == "ok"
+    assert len(record["responses"]) == 2
+    assert record["usage"]["llm_responses"] == 2
+    assert len(ClarificationBackend.requests) == 2
+    assert not Path(record["session_file"]).is_absolute()
+    assert (destination / record["session_file"]).is_file()
+    before = record_path.read_bytes()
+    assert ev.run_campaign(destination, "challenge", limit=0, backend_factory=fake_backend) == 0
+    assert record_path.read_bytes() == before
+    assert ev.verify_freeze(destination)["seed_offset"] == 100000
+    assert ev.write_report(destination).is_absolute()
+
+
+def test_seed_offset_creates_reproducible_disjoint_replacement_data(tmp_path):
+    original = generate_examples(tmp_path / "original")
+    replacement = generate_examples(tmp_path / "replacement", seed_offset=100000)
+    copy = generate_examples(tmp_path / "copy", seed_offset=100000)
+    assert replacement == copy
+    assert [c["case_id"] for c in original] == [c["case_id"] for c in replacement]
+    assert not {c["seed"] for c in original} & {c["seed"] for c in replacement}
+    for old_case, new_case in zip(original, replacement):
+        old_csv = (tmp_path / "original" / old_case["data"]).read_bytes()
+        new_csv = (tmp_path / "replacement" / new_case["data"]).read_bytes()
+        assert old_csv != new_csv
+        assert new_csv == (tmp_path / "copy" / new_case["data"]).read_bytes()
+
+
+@pytest.mark.parametrize("offset", [-1, True, 1.5, 2**32])
+def test_invalid_seed_offset_rejected_before_fixture_writes(tmp_path, offset):
+    destination = tmp_path / "invalid"
+    with pytest.raises(ValueError, match="seed_offset"):
+        generate_examples(destination, seed_offset=offset)
+    assert not destination.exists()

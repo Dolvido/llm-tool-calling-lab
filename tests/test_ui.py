@@ -112,3 +112,16 @@ def test_evidence_panel_renders_saved_model_metrics(app, monkeypatch):
     rendered = app.dataframe[0].value.set_index("Measure")["Value"].to_dict()
     assert rendered == result["metrics"]
     assert any(result["run_id"] in caption.value for caption in app.caption)
+
+
+def test_validated_anomaly_row_ids_are_preserved_and_displayed(app):
+    app.run()
+    app.selectbox[0].set_value("Find unusual rows").run()
+    app.button[0].click().run()
+    session = app.session_state["lab_session"]
+    session.respond = lambda *args: {"answer": "Inspect these recorded unusual cases.", "row_ids": ["4", "21", "46", "16"],
+                                      "next_action": "Review the cases in context.", "evidence": []}
+    app.chat_input[0].set_value("Show the unusual cases.").run()
+    assert not app.exception
+    assert app.session_state["lab_history"][-1]["row_ids"] == ["4", "21", "46", "16"]
+    assert any(item.value == "Selected row IDs: 4, 21, 46, 16" for item in app.markdown)

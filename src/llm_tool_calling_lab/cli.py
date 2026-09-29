@@ -22,6 +22,7 @@ def main():
     freeze = sub.add_parser("freeze", help="Freeze a new campaign before evaluation")
     freeze.add_argument("destination", type=Path)
     freeze.add_argument("--families", nargs="+", default=["regression", "classification", "anomaly", "clustering"])
+    freeze.add_argument("--seed-offset", type=int, default=0, help="Freeze a fresh synthetic dataset assignment")
     evaluate = sub.add_parser("evaluate", help="Run/resume a frozen local-model campaign")
     evaluate.add_argument("destination", type=Path)
     evaluate.add_argument("--split", choices=["development", "heldout", "challenge", "challenge_development"], default="development")
@@ -53,7 +54,7 @@ def main():
             print(f"Generated {len(cases)} cases at {args.destination.resolve()}; truth files are evaluator-only.")
         elif args.command == "freeze":
             from .evaluation import freeze
-            print(freeze(args.destination, config, args.families))
+            print(freeze(args.destination, config, args.families, seed_offset=args.seed_offset))
         elif args.command == "evaluate":
             from .evaluation import run_campaign
             run_campaign(args.destination, args.split, args.limit)
