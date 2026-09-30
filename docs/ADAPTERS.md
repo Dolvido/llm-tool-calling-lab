@@ -26,3 +26,5 @@ Add metadata and a constructor, run through `ModelService`, test invalid outputs
 `TaskSpec` holds question, family, dataset IDs, features, optional target/batch, and group count. `RunResult` holds real run ID, method, task, status, public metrics, bounded summary, warnings, artifact references, and elapsed time. Failed fits also consume allowance.
 
 `retrieve_result` exposes only public validation/batch evidence. `evaluation_metrics` is an evaluator-only Python method absent from the tool catalog. Never add private test records or fitted objects to tool responses.
+
+The exact user questions and follow-ups are canonical in the saved session transcript. `TaskSpec.question` is optional tool-supplied descriptive text and can be empty; use the session-to-run ID link to recover the original request. Output schemas are fixed by the task family in this version.

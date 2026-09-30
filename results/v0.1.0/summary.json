@@ -1,0 +1,1375 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "created_utc": "2026-09-29T23:47:31.124052+00:00",
+    "families": [
+      "regression",
+      "classification",
+      "anomaly",
+      "clustering"
+    ],
+    "config": {
+      "catalog": "default",
+      "model": "qwen3:14b-q4_K_M",
+      "host": "http://localhost:11434",
+      "max_fits": 2,
+      "max_tool_calls": 8,
+      "max_llm_responses": 6,
+      "max_repairs": 1,
+      "max_seconds": 180,
+      "num_ctx": 8192,
+      "max_output_tokens": 1024,
+      "max_episode_tokens": 4096,
+      "temperature": 0,
+      "seed": 0
+    },
+    "seed_offset": 100000,
+    "backend": {
+      "model": "qwen3:14b-q4_K_M",
+      "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+      "size": 9276198565
+    },
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "packages": {
+      "Jinja2": "3.1.6",
+      "MarkupSafe": "3.0.3",
+      "Pygments": "2.21.0",
+      "altair": "6.3.0",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "attrs": "26.1.0",
+      "build": "1.6.1",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.1",
+      "click": "8.5.0",
+      "cloudpickle": "3.1.2",
+      "colorama": "0.4.6",
+      "h11": "0.16.0",
+      "httpcore": "1.0.9",
+      "httptools": "0.8.0",
+      "httpx": "0.28.1",
+      "idna": "3.20",
+      "iniconfig": "2.3.0",
+      "itsdangerous": "2.2.0",
+      "joblib": "1.6.0",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "llm-tool-calling-lab": "0.1.0",
+      "narwhals": "2.26.0",
+      "numpy": "2.5.3",
+      "ollama": "0.6.3",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "pillow": "12.3.0",
+      "pip": "25.0.1",
+      "pluggy": "1.6.0",
+      "protobuf": "7.36.2",
+      "pyarrow": "25.0.1",
+      "pydantic": "2.13.5",
+      "pydantic_core": "2.46.5",
+      "pydeck": "0.9.3",
+      "pyproject_hooks": "1.3.3",
+      "pytest": "9.1.1",
+      "python-dateutil": "2.9.0.post0",
+      "python-multipart": "0.0.32",
+      "referencing": "0.37.0",
+      "requests": "2.34.2",
+      "rpds-py": "2026.6.3",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "setuptools": "84.0.0",
+      "six": "1.17.0",
+      "starlette": "1.7.0",
+      "streamlit": "1.64.0",
+      "threadpoolctl": "3.7.0",
+      "toml": "0.10.2",
+      "typing-inspection": "0.4.4",
+      "typing_extensions": "4.16.0",
+      "tzdata": "2026.4",
+      "urllib3": "2.8.0",
+      "uvicorn": "0.54.0",
+      "watchdog": "6.0.0",
+      "websockets": "16.1.1",
+      "wheel": "0.48.0"
+    },
+    "sources": {
+      "contracts.py": "9453fbc275d1613fcd476b2c819999cd820e2f16a51f09ea0cb736ad96f29b25",
+      "backend.py": "de37d5bbb2ffddb8b908efbcd72a6d7262d8d4fe8e04a7213624424e1f2d5a34",
+      "chat.py": "08425ccae6ff896bab9cd338ed2944d98279405045f0c3c1cb34a0ae9a189ca8",
+      "catalog.py": "f6a6f269b5825cbcb9eb2c65938c87190ccf1e509511621c373ddb9870e0a01f",
+      "data.py": "4d588300bd47ecc799f619d0c08210a025f80c2d312fa87ba56c96ce4c760628",
+      "models.py": "a1f2c89f50b493a991812777a50c19ec70edf905c805177c86c447834bdc1fa7",
+      "fixtures.py": "0b3e32a543ba970583df060d873f3eb123f66fdeb93abc3d3c40d0b6a1aa9323",
+      "evaluation.py": "59bc2e8dd5c521dbc679435c1e6ce70d0c8ea9bfe3570b73925e3ea0b38bbfab"
+    },
+    "fixture_hashes": {
+      "fixtures/c000/data.csv": "5006dea7e859b27f332c672e62baa732f584cbb25e5b0f0b248cf5c5f8cf9944",
+      "fixtures/c001/data.csv": "455fc28c44ebf368731a39fd9b1bd7c5088c4d50da708fd51376f9d732c12dba",
+      "fixtures/c010/data.csv": "0950137c60c1a7fafdc73953c04807ad6ef3b4bbda5370acf290c2da7d31162a",
+      "fixtures/c011/data.csv": "4e3954c8290055fcd54adcd093f7a2d663a978e5d415bde075c0a1ff19c64835",
+      "fixtures/c020/batch.csv": "6515b177be7274e290e500d19d97db3be18101da6a0e37fca82c406b4132514e",
+      "fixtures/c020/data.csv": "2232465f24bc8b5172a88ed5a0e0a2b8bd305d433777b84afd3dd871fb9393a6",
+      "fixtures/c021/batch.csv": "5f73ea5ee8d8f00b460baddc757b6494b5458bba692e62593d3ce05adb9b196f",
+      "fixtures/c021/data.csv": "8d9fa243c63c81d07680f8d1bd2eaeae72b6e0af6366a98fab894240966bd240",
+      "fixtures/c030/data.csv": "0f3bae2f2954aed68f3348e5cc67f2101d183005d11802dc4af6df92fb56f688",
+      "fixtures/c031/data.csv": "a69af2c4eb0501fa894a8014dc37cbcae51b59a5f99540968fb3c3bca8b04764",
+      "fixtures/c100/data.csv": "4fc2fdf7149016730cc6c3ed573b0c916ab29dc3d1d5a26bcfdfa5b17a6fe407",
+      "fixtures/c101/data.csv": "549565d2ba74ef77a9c4f105bc4fb1b0d7445f5cc7c2372a3fb19e46ee391756",
+      "fixtures/c102/data.csv": "34abedf7e807fe489bb16541c836495dc7c1351755f4f58fe0444906726172a4",
+      "fixtures/c103/data.csv": "4fc5c98c606e54dcc54fc726abb0a906bf3427875b45d2df90d6b720eace2c29",
+      "fixtures/c104/data.csv": "49b5f34c9d46c10f827124bf3f2377e837802419654c0a0067b13b25ce10bebe",
+      "fixtures/c105/data.csv": "26834094bbeeed867a76b697f04a77acddd022618459ef0197b6bb43c736b5bc",
+      "fixtures/c110/data.csv": "279fc1da4bf5177b1fc2a05c5d661bb57400519e276512c785bab4017609ac9b",
+      "fixtures/c111/data.csv": "c72c96c4152cca52d031b1ff480e453805aa598085a03496aceb536c25833e78",
+      "fixtures/c112/data.csv": "4e095a21d41f8658bf6f42177144bd1ef51e413740411bd2d4e8fb8a124cd0dc",
+      "fixtures/c113/data.csv": "dc848b9b62f1da30212373fa698605a642410120025d997c3558d8f46cb95728",
+      "fixtures/c114/data.csv": "883bfeb7ffccb34fce17eeddb0dead67c1c2ecb7f6455e7a8cf2608d6b9d5e48",
+      "fixtures/c115/data.csv": "17d1127ebcd4ea15ac266558153108155afe04aa729221d1178fa8c95c5a9761",
+      "fixtures/c120/batch.csv": "c18d92ef7c243d941e948e22a82f373df750a3ec1a3d4b44b11cc87a915a360d",
+      "fixtures/c120/data.csv": "a175b41403c6fbda4e2c5be1ad9d4ccb6e420a874e3d575805d9acd3bd1e9ca0",
+      "fixtures/c121/batch.csv": "f2c56925e2aca98b6bc1fa77d7e6daeeb90bbc03e6fc72a4bf8915d8248a163a",
+      "fixtures/c121/data.csv": "91edd8e390c599bb926882747e612745b8dca55e61c09b414fff5de18dfb9db9",
+      "fixtures/c122/batch.csv": "7d64215896c92e1d4c0c744593a227dab1d00b4a599c25264a8b0ed0701321e0",
+      "fixtures/c122/data.csv": "d823c143551520775499c2641f7076139bc616e8c5486a65144570375ed7bc66",
+      "fixtures/c123/batch.csv": "bb015b033f199b0001250b7e443e02f657320a9f9f18bf85a20d2ff199a9ecce",
+      "fixtures/c123/data.csv": "b7f24af90fcf5e44e3ccd9f5dbcddc6b4f8ec9435f622348c933dc87d4aef7ec",
+      "fixtures/c124/batch.csv": "39f85e1f732547bad46b2d85c57658f99a915d625e184342fa71cb9e2b09b051",
+      "fixtures/c124/data.csv": "d2588c03fe5c3279917c384588f77a3733b488fd94704b475504ffcf7f6343de",
+      "fixtures/c125/batch.csv": "eaa2d2947bccdbb21ab81ecf2e6c2d344232b18a8ade05c27d783e02bad248ec",
+      "fixtures/c125/data.csv": "5a852ee68a359b91e599e2276ef49e41dbe4c326d10f0a91fe689a965250ab49",
+      "fixtures/c130/data.csv": "4e45abd56e1fdcb55375c685056c516fb21e9caaa2203c5c22770bf43c7a977d",
+      "fixtures/c131/data.csv": "4c1836e6028962f9ebb48a254b9d5b4a11def9129cd66ce4813be6922a14179b",
+      "fixtures/c132/data.csv": "2884bcfed391dbec9b13c53d78d5ef196d156981b0dee7158a313c9a306bce1b",
+      "fixtures/c133/data.csv": "cdd7b0e6f9cbc01c411f1a6c81ba1d6dd599e256afed1dc297d97f2c15ba5398",
+      "fixtures/c134/data.csv": "8e3a12f698580050d88e3d29602655a26f420484ad501a43f3065d9d5cf0d1b7",
+      "fixtures/c135/data.csv": "a1fe89138d8a5af17a8294a7e995e5bba8848ef1e639c65972d515c5e67957b5",
+      "fixtures/c200/data.csv": "d144f371d3e00b5cc42c23318b43fcbd1561994d41a96d11cd5d7bd1fab78beb",
+      "fixtures/c201/data.csv": "c39d9d89b3a3684fa8e5a5ab850845998e8c04107db652ae2a9a84b70b8fc538",
+      "fixtures/c202/data.csv": "c1758f392033e347a1992aa2a45d5a41e7d08a9658dbc1264431964a62d11d97",
+      "fixtures/c203/data.csv": "4266aec23faf364ee456c78171047fe1f467d72f1720bca4fa768204d35fb838",
+      "fixtures/c204/data.csv": "fe8062f180b5658bf6ea06d0f292c13863ba0b5c58ca6c142be63295cdef9bfb",
+      "fixtures/c205/batch.csv": "d8c835dcc572bd73c243177e30af348a5647ee071f0e2213e49aaa025b303522",
+      "fixtures/c205/data.csv": "e5d1b3b92a04d02c962c2f099d24e1cdc5210e799e4ecda659fca2e187dd4242",
+      "fixtures/c300/data.csv": "4b453224084e33fa22362dd3bc900252686b31a8737c3f50d83148c3e4af630d",
+      "fixtures/c301/data.csv": "52113b664eccfcd880823b829ec66a79ebb44cc91f407bd349bb3729cc48f0de",
+      "fixtures/c302/data.csv": "ab7d5826dc524e6a4d67cad745149a506653df3f4f45c3fd0d9a95615cd821a6",
+      "fixtures/c303/data.csv": "e585950d8c1d42cb2ed5865496479bb70415dbae01eb2e0ecd90d0a735d3a344",
+      "fixtures/c304/data.csv": "0190b8e147468c4e1324b846e694c1f2a14b687074d361eb610f16329f1fee3c",
+      "fixtures/c305/batch.csv": "1f87386b56db5a046f96893f3244f134eb20c10666a8261c59c5d58c6a00eda9",
+      "fixtures/c305/data.csv": "70cdeaf0a2226c3ed407294c5ca5023e63dcb8372c07a82190c8ad45a32d6f7c",
+      "fixtures/cases.json": "07d2d4be1d13bd55079d4acc37f080f4bc878d9d43333fbaf89c1bba1be5e760"
+    },
+    "rubric": {
+      "version": "0.1.0",
+      "supported": [
+        "appropriate_task_target",
+        "valid_required_output",
+        "faithful_claims",
+        "relevant_followup",
+        "appropriate_limits"
+      ],
+      "challenge": [
+        "specific_limitation_or_clarification",
+        "appropriate_next_step",
+        "faithful_claims"
+      ],
+      "review_policy": "Qualitative scores require an identified reviewer and rationale. AI review must be labeled AI, never human. Unreviewed is not a pass."
+    },
+    "counts": {
+      "development": 16,
+      "heldout": 96,
+      "challenge": 24
+    },
+    "reference_counts": {
+      "development": 8,
+      "heldout": 24
+    },
+    "repeats": {
+      "development": 1,
+      "heldout": 2,
+      "challenge": 2,
+      "challenge_development": 1
+    }
+  },
+  "model_quality": [
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "generic",
+      "metric": "precision_at_4",
+      "case_mean": 0.0,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "reference",
+      "metric": "precision_at_4",
+      "case_mean": 0.625,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "structured",
+      "metric": "precision_at_4",
+      "case_mean": 0.5,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "generic",
+      "metric": "test_balanced_accuracy",
+      "case_mean": 0.8986111111111111,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "reference",
+      "metric": "test_balanced_accuracy",
+      "case_mean": 0.6555555555555556,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "structured",
+      "metric": "test_balanced_accuracy",
+      "case_mean": 0.8986111111111111,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "generic",
+      "metric": "test_adjusted_rand_index",
+      "case_mean": 1.0,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "reference",
+      "metric": "test_adjusted_rand_index",
+      "case_mean": 1.0,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "structured",
+      "metric": "test_adjusted_rand_index",
+      "case_mean": 1.0,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "generic",
+      "metric": "baseline_test_mae",
+      "case_mean": 3.0396956111466835,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "generic",
+      "metric": "test_mae",
+      "case_mean": 1.7303920101518662,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "reference",
+      "metric": "baseline_test_mae",
+      "case_mean": 3.0396956111466835,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "reference",
+      "metric": "test_mae",
+      "case_mean": 1.7303920101518662,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "structured",
+      "metric": "baseline_test_mae",
+      "case_mean": 3.0396956111466835,
+      "cases": 2
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "structured",
+      "metric": "test_mae",
+      "case_mean": 1.7303920101518662,
+      "cases": 2
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "generic",
+      "metric": "precision_at_4",
+      "case_mean": 0.22916666666666666,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "reference",
+      "metric": "precision_at_4",
+      "case_mean": 0.5833333333333334,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "structured",
+      "metric": "precision_at_4",
+      "case_mean": 0.2916666666666667,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "generic",
+      "metric": "test_balanced_accuracy",
+      "case_mean": 0.8638106120852473,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "reference",
+      "metric": "test_balanced_accuracy",
+      "case_mean": 0.7613494114103452,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "structured",
+      "metric": "test_balanced_accuracy",
+      "case_mean": 0.8638106120852473,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "generic",
+      "metric": "test_adjusted_rand_index",
+      "case_mean": 1.0,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "reference",
+      "metric": "test_adjusted_rand_index",
+      "case_mean": 1.0,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "structured",
+      "metric": "test_adjusted_rand_index",
+      "case_mean": 1.0,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "generic",
+      "metric": "baseline_test_mae",
+      "case_mean": 3.045470779084597,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "generic",
+      "metric": "test_mae",
+      "case_mean": 1.5797358781456443,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "reference",
+      "metric": "baseline_test_mae",
+      "case_mean": 3.045470779084597,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "reference",
+      "metric": "test_mae",
+      "case_mean": 1.939991694140421,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "structured",
+      "metric": "baseline_test_mae",
+      "case_mean": 3.045470779084597,
+      "cases": 6
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "structured",
+      "metric": "test_mae",
+      "case_mean": 1.5797358781456443,
+      "cases": 6
+    }
+  ],
+  "recorded": 168,
+  "required_total": 168,
+  "required_recorded": 168,
+  "required_missing": 0,
+  "paired_completion": [
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "structured_wins": 0,
+      "generic_wins": 2,
+      "ties": 2,
+      "both_fail": 2,
+      "pending_review": 0,
+      "incomplete": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "structured_wins": 1,
+      "generic_wins": 0,
+      "ties": 0,
+      "both_fail": 1,
+      "pending_review": 0,
+      "incomplete": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "structured_wins": 1,
+      "generic_wins": 0,
+      "ties": 1,
+      "both_fail": 0,
+      "pending_review": 0,
+      "incomplete": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "structured_wins": 0,
+      "generic_wins": 0,
+      "ties": 2,
+      "both_fail": 0,
+      "pending_review": 0,
+      "incomplete": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "structured_wins": 0,
+      "generic_wins": 0,
+      "ties": 1,
+      "both_fail": 1,
+      "pending_review": 0,
+      "incomplete": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "structured_wins": 0,
+      "generic_wins": 1,
+      "ties": 1,
+      "both_fail": 4,
+      "pending_review": 0,
+      "incomplete": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "structured_wins": 0,
+      "generic_wins": 1,
+      "ties": 5,
+      "both_fail": 0,
+      "pending_review": 0,
+      "incomplete": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "structured_wins": 0,
+      "generic_wins": 0,
+      "ties": 6,
+      "both_fail": 0,
+      "pending_review": 0,
+      "incomplete": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "structured_wins": 1,
+      "generic_wins": 1,
+      "ties": 3,
+      "both_fail": 1,
+      "pending_review": 0,
+      "incomplete": 0
+    }
+  ],
+  "qualitative_pending": 0,
+  "records": [
+    {
+      "episode_id": "c000_generic_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c000_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c000_structured_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c001_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c001_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c001_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c010_generic_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c010_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c010_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c011_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c011_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c011_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c020_generic_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c020_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c020_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c021_generic_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c021_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c021_structured_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c030_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c030_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c030_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c031_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c031_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c031_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c100_generic_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c100_generic_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c100_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c100_structured_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c100_structured_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c101_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c101_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c101_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c101_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c101_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c102_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c102_generic_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c102_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c102_structured_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c102_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c103_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c103_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c103_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c103_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c103_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c104_generic_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c104_generic_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c104_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c104_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c104_structured_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c105_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c105_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c105_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c105_structured_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c105_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c110_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c110_generic_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c110_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c110_structured_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c110_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c111_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c111_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c111_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c111_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c111_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c112_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c112_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c112_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c112_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c112_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c113_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c113_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c113_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c113_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c113_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c114_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c114_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c114_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c114_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c114_structured_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c115_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c115_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c115_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c115_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c115_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c120_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c120_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c120_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c120_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c120_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c121_generic_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c121_generic_1",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c121_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c121_structured_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c121_structured_1",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c122_generic_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c122_generic_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c122_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c122_structured_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c122_structured_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c123_generic_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c123_generic_1",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c123_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c123_structured_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c123_structured_1",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c124_generic_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c124_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c124_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c124_structured_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c124_structured_1",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c125_generic_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c125_generic_1",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c125_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c125_structured_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c125_structured_1",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c130_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c130_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c130_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c130_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c130_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c131_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c131_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c131_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c131_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c131_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c132_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c132_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c132_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c132_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c132_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c133_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c133_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c133_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c133_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c133_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c134_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c134_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c134_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c134_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c134_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c135_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c135_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c135_reference_0",
+      "status": "ok",
+      "completion": null
+    },
+    {
+      "episode_id": "c135_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c135_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c300_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c300_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c300_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c300_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c301_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c301_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c301_structured_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c301_structured_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c302_generic_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c302_generic_1",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c302_structured_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c302_structured_1",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c303_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c303_generic_1",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c303_structured_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c303_structured_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c304_generic_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c304_generic_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c304_structured_0",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c304_structured_1",
+      "status": "ok",
+      "completion": 0
+    },
+    {
+      "episode_id": "c305_generic_0",
+      "status": "ok",
+      "completion": 1
+    },
+    {
+      "episode_id": "c305_generic_1",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c305_structured_0",
+      "status": "error",
+      "completion": 0
+    },
+    {
+      "episode_id": "c305_structured_1",
+      "status": "error",
+      "completion": 0
+    }
+  ]
+}

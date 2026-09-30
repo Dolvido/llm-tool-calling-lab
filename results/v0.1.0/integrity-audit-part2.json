@@ -1,0 +1,251 @@
+{
+  "generated_utc": "2026-09-30T00:17:26.529853+00:00",
+  "campaign": "campaign-v0.1-r2",
+  "scope": "Completed c130-c135 and c300-c305 records; complements c000-c125 audit.",
+  "counts": {
+    "completed_records": 54,
+    "generic_records": 24,
+    "llm_sessions": 48,
+    "unique_run_artifacts": 56,
+    "successful_run_artifacts": 52,
+    "public_payload_privacy_checks": 345,
+    "three_way_partition_checks": 46,
+    "delivered_responses": 96,
+    "citation_checks": 67,
+    "response_evidence_value_checks": 67,
+    "cumulative_usage_snapshots_checked": 192,
+    "backend_generation_checks": 168,
+    "tool_event_privacy_checks": 66,
+    "bootstrap_context_privacy_checks": 90,
+    "tool_message_privacy_checks": 66,
+    "reference_records": 6,
+    "structured_records": 24,
+    "failed_run_artifacts": 4,
+    "anomaly_reference_partition_checks": 6,
+    "accepted_anomaly_ranking_checks": 3
+  },
+  "findings": [],
+  "record_hashes": [
+    {
+      "episode_id": "c130_generic_0",
+      "sha256": "88fe5ddef91b2feb72693d9c6635381940428edef2aeb7740cea89cd4a47ce38"
+    },
+    {
+      "episode_id": "c130_generic_1",
+      "sha256": "5b99ededb1d367731300ea90c01e8ad8771543f34aea3d84b50d6843120762ba"
+    },
+    {
+      "episode_id": "c130_reference_0",
+      "sha256": "7f05c2973eaaff2670d5ddc624514cdc7e36db425c59b1d1fea67e6b9b1c6468"
+    },
+    {
+      "episode_id": "c130_structured_0",
+      "sha256": "df2ef4e88d4f4b5189fd33247e426368067221f8fca2e9ce0ef079c25e032c86"
+    },
+    {
+      "episode_id": "c130_structured_1",
+      "sha256": "7240cea22180cbfb2266da73d64b0a58be84b9740b6a46dad1a8ebe1d6db7d53"
+    },
+    {
+      "episode_id": "c131_generic_0",
+      "sha256": "e211f2b7e7048ac42207c595ee3e56028f6eaf5789b903fde9098621a069d19f"
+    },
+    {
+      "episode_id": "c131_generic_1",
+      "sha256": "183ca70d0fc006c232a5293b341423b3b958605187174a88d5f7b10ea1cc414f"
+    },
+    {
+      "episode_id": "c131_reference_0",
+      "sha256": "2105d0ce709ee29c5ae043c9b2bcdcdaa7023d1bc4658621990372c796d15f4d"
+    },
+    {
+      "episode_id": "c131_structured_0",
+      "sha256": "43bbb183c1d702aa82184fd7f6e0d89b908d2d4415780d7c4aacfa3a3fda7ac7"
+    },
+    {
+      "episode_id": "c131_structured_1",
+      "sha256": "a87c1d2f18960d08b5efc0f4d676fab21aaf1155a82541532359c1656119d48c"
+    },
+    {
+      "episode_id": "c132_generic_0",
+      "sha256": "a116f33a068d13e61ca0e790c32b2c9ff3ddffb84f73aaa0c237911b498cae61"
+    },
+    {
+      "episode_id": "c132_generic_1",
+      "sha256": "1942dfd2ea1dcd6c7d78d170a761226a721670fff500696e02a68ff5ba0fcfdb"
+    },
+    {
+      "episode_id": "c132_reference_0",
+      "sha256": "86bc0f6c206e4e54a49ec5e809e59b53da8e300177c3871724782fc1f30d418d"
+    },
+    {
+      "episode_id": "c132_structured_0",
+      "sha256": "251647fb67c3716cb7a7609062476ab69feb91b28718971ce0540b9a456fe4b2"
+    },
+    {
+      "episode_id": "c132_structured_1",
+      "sha256": "7b6ed2949e39f3903a404ac0ee62ecaa0fc1e28d299b271514976725845e3864"
+    },
+    {
+      "episode_id": "c133_generic_0",
+      "sha256": "97c39fc53a51877e94d75df19648c2490ce330abbdfc71dd5f8ccd711d5a5a1a"
+    },
+    {
+      "episode_id": "c133_generic_1",
+      "sha256": "14e8ec52c0353b8e4cfff26773acbdb11c6c71c68fd8d3cbad2947c45914360d"
+    },
+    {
+      "episode_id": "c133_reference_0",
+      "sha256": "afcfe9ce55d955864165746feba215bed0d11e88e84584114168fa61e2ec8d6a"
+    },
+    {
+      "episode_id": "c133_structured_0",
+      "sha256": "841b2997f3e27289c881f60d3b735cd6171b1baf7cbe90134172b347fc563131"
+    },
+    {
+      "episode_id": "c133_structured_1",
+      "sha256": "6d37ab86d026aa5c781c8fab52a57ba01e97a89b7f98fe4747001233c452c7b5"
+    },
+    {
+      "episode_id": "c134_generic_0",
+      "sha256": "c431f6bb053b7fd8ff4e250385d5f7302cde3f0e715927c7c85ff8b1c7bdb329"
+    },
+    {
+      "episode_id": "c134_generic_1",
+      "sha256": "54630f268bee08855ca78b60cebceffd47e7930e38824df4d6cc520b0ebb68db"
+    },
+    {
+      "episode_id": "c134_reference_0",
+      "sha256": "26416719d93aa33b0c23bdd7d49122966e21a509e0377b14b1f6aa7dab4bdbb6"
+    },
+    {
+      "episode_id": "c134_structured_0",
+      "sha256": "d7098e01682a9a0998506b6824d3a372edaadc9f4e21797b3e948895dd86e12c"
+    },
+    {
+      "episode_id": "c134_structured_1",
+      "sha256": "ef77dc6c00d9bed40f6f1d247e8e619ad3d9386f9eea094006c4e47c3f15ddaa"
+    },
+    {
+      "episode_id": "c135_generic_0",
+      "sha256": "b4ae4dfe295ba9b7e32804a8b55b56390e0cc078fa9bea8f911662f41ded970c"
+    },
+    {
+      "episode_id": "c135_generic_1",
+      "sha256": "08d7a4dffc925c84bb7be7940add517c36f5d495bbbadde3e566515dc1814d10"
+    },
+    {
+      "episode_id": "c135_reference_0",
+      "sha256": "fd3c7d91245f4aefc81b565fbce3317112961c3ef7e66531e0e21094137f2dc6"
+    },
+    {
+      "episode_id": "c135_structured_0",
+      "sha256": "2c595ac00bdae72ba3f45d891c05e1e178c9b5cc0de21a05e6dfbbd74867151d"
+    },
+    {
+      "episode_id": "c135_structured_1",
+      "sha256": "fac3fd0fd87c5ef58023b3c8019377d24c6e648f13550160a4f7d06549162932"
+    },
+    {
+      "episode_id": "c300_generic_0",
+      "sha256": "197bf6a44de287bd093654679164c591c20eb0b4cdc9838d6a440ad27fc45a22"
+    },
+    {
+      "episode_id": "c300_generic_1",
+      "sha256": "0a279fed6e14c0c0454cf62653b93f2e2c0172fb89cbe0ce22f83674e9250d63"
+    },
+    {
+      "episode_id": "c300_structured_0",
+      "sha256": "b519c872398e879e78bfa4b75137696c9597d3e6edf4a2ced4c929b32db91fda"
+    },
+    {
+      "episode_id": "c300_structured_1",
+      "sha256": "9360c957ac46f23032e1d16d6fe1ab0b6c08e28aa990f021f13f2009aa5511a0"
+    },
+    {
+      "episode_id": "c301_generic_0",
+      "sha256": "a7ce45385cf11ad01e1bfcbcf11c14c70b63308811888951c48d54d10a832b8e"
+    },
+    {
+      "episode_id": "c301_generic_1",
+      "sha256": "f06c6a64d67cffeca547a0a9a15643a355b55e26509c4a743a8f3ce8f6bc915d"
+    },
+    {
+      "episode_id": "c301_structured_0",
+      "sha256": "ad169a44c89757acacb96880111c27d7cb49b81233a42c7c4d30ff83fce1d077"
+    },
+    {
+      "episode_id": "c301_structured_1",
+      "sha256": "d87cea39d0e3cea557b84320bdd7ce610fb0cc8a809592427d527caef4398e95"
+    },
+    {
+      "episode_id": "c302_generic_0",
+      "sha256": "d65016269b4c4535c40d0b2ee4deb4608714e5e90335f1ce391056e08450ce6e"
+    },
+    {
+      "episode_id": "c302_generic_1",
+      "sha256": "43c8480652b92fa45b61cf765b9e01fee1df1f0f99cbd2864bbfdf704f28c165"
+    },
+    {
+      "episode_id": "c302_structured_0",
+      "sha256": "ad2bb64b789144f5ccdcaf2e79d68f1df249239927cadaa6246787e3e4107ab3"
+    },
+    {
+      "episode_id": "c302_structured_1",
+      "sha256": "1b19325002243d95555c219d47870cac899b248a1ccad8bd330fda696314ff63"
+    },
+    {
+      "episode_id": "c303_generic_0",
+      "sha256": "ec87a52eb187355aa4827d0a8b1c6c070cb405540bb4c2bb6dc462820c5c84e5"
+    },
+    {
+      "episode_id": "c303_generic_1",
+      "sha256": "978940e4cfe5ed46fb52dbfbd52a696419c1dd1be0d34b2f1920bf184bdf2f2c"
+    },
+    {
+      "episode_id": "c303_structured_0",
+      "sha256": "ea0bfa2b401d24fd8360eaa806fc58cb064b3dad7a875fdd298baf4083ce0912"
+    },
+    {
+      "episode_id": "c303_structured_1",
+      "sha256": "fdd17bcdcb8477b8837268225ea9a6eaf383729d12b9109d3afb8bf3e68031ff"
+    },
+    {
+      "episode_id": "c304_generic_0",
+      "sha256": "922cdf131da209b99053fd42b0af0d5fd85188399f8ef6055aabf01d3c6d6701"
+    },
+    {
+      "episode_id": "c304_generic_1",
+      "sha256": "c2905b4d675021dc8e4ab38052caace7cae53aca45538d72f1f200487ab30b4f"
+    },
+    {
+      "episode_id": "c304_structured_0",
+      "sha256": "10c89a2377c3d1876a921c38991abc41d5e4e36637c77e30137dbe679036976b"
+    },
+    {
+      "episode_id": "c304_structured_1",
+      "sha256": "d53ef5acdc6631612fbba92345050aad3f92d426309d873c8e62557621b8972a"
+    },
+    {
+      "episode_id": "c305_generic_0",
+      "sha256": "408941f3cad51d755da857fbd18336ac260f6c1f58ebd4ca400f5bb809a59206"
+    },
+    {
+      "episode_id": "c305_generic_1",
+      "sha256": "9fdad57be647f3cda8df3e0acd92a16eddecd222ffa00125ba727d2f72d1507c"
+    },
+    {
+      "episode_id": "c305_structured_0",
+      "sha256": "edc964f7f4211133385cf74f5e3d3ce276cc38a61445508743cd4d8cb4cacaad"
+    },
+    {
+      "episode_id": "c305_structured_1",
+      "sha256": "7f5d00ce24d72d91967d959f45b49e2b4a788a8e9630b058a57578b976cc8119"
+    }
+  ],
+  "not_audited": [
+    "Natural-language quality, relevance, and limitations, already covered separately by qualitative rubric.",
+    "No refitting or independent metric/prediction/preprocessing recomputation and no model-weight verification.",
+    "Structured-key privacy inspection is not a general semantic proof against every possible covert disclosure."
+  ]
+}

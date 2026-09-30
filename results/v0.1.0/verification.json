@@ -1,0 +1,75 @@
+{
+  "release_gates_passed": true,
+  "version": "0.1.0",
+  "experimental": true,
+  "evaluated_source_commit": "6495a339fdfe1b02140540b49257bf0fc5a697e2",
+  "families": [
+    "regression",
+    "classification",
+    "anomaly",
+    "clustering"
+  ],
+  "candidate_methods": 8,
+  "automated_checks": {
+    "passed": 102,
+    "failed": 0,
+    "environment": "Fresh Windows Python 3.12 virtual environment with installed wheel",
+    "elapsed_seconds": 24.71,
+    "all_eight_frozen_source_hashes_match_installed_wheel": true
+  },
+  "campaign": {
+    "required_records": 168,
+    "completed_records": 168,
+    "pending_qualitative_reviews": 0,
+    "missing_required_records": 0,
+    "review_type": "AI, unblinded implementation agents; no independent human review"
+  },
+  "artifact_audit": {
+    "completed_records": 168,
+    "findings": 0,
+    "independent_model_metric_recomputation": false,
+    "receipts": [
+      "integrity-audit-part1.json",
+      "integrity-audit-part2.json"
+    ]
+  },
+  "clean_install_live": {
+    "catalog": "tutorial",
+    "statuses": [
+      "ok",
+      "ok"
+    ],
+    "fits": 2,
+    "methods": [
+      "elastic_net",
+      "random_forest_regressor"
+    ],
+    "qualitative_note": "Operational demonstration only. First answer used unsupported significance language; it is preserved in development evidence."
+  },
+  "tutorial": [
+    {
+      "method": "ridge",
+      "status": "ok",
+      "metrics": {
+        "validation_mae": 0.14201516484532206,
+        "baseline_validation_mae": 3.0325672551549245
+      }
+    },
+    {
+      "method": "elastic_net",
+      "status": "ok",
+      "metrics": {
+        "validation_mae": 0.28696382014340255,
+        "baseline_validation_mae": 3.0325672551549245
+      }
+    }
+  ],
+  "publication_policy": "Publish only after GitHub Windows Integrity checks succeed on the release commit. See the release tag checks for that CI result.",
+  "scope_limits": [
+    "Small synthetic numerical datasets and one tested local backend",
+    "No human-user study",
+    "No hosted demo or installer",
+    "No additional operating-system guarantee"
+  ],
+  "development_time_note": "39 active-hour cap was retained. Automated execution and concurrent AI work are not reported as human hours; no human timesheet is inferred."
+}

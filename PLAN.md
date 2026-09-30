@@ -1,6 +1,6 @@
 # LLM Tool Calling Lab Prototype Plan
 
-Prepared September 29, 2026. Implementation was explicitly authorized and has begun. This document preserves the design rationale; README.md describes the implemented interface and RELEASE_STATUS.md records verified delivery.
+Prepared September 29, 2026. Implementation and the full frozen evaluation are complete. This document preserves the design rationale; README.md describes the implemented interface and RELEASE_STATUS.md records verified delivery.
 
 ## Accepted v0.1 release decisions
 

@@ -1,6 +1,6 @@
 # LLM Tool Calling Lab Portfolio and Media Strategy
 
-Revised for Luke Payne on September 29, 2026. This is a local strategy and copy draft for personal GitHub and the existing portfolio website. Implementation is underway; use RELEASE_STATUS.md and actual run artifacts for verified claims. Planned-stage wording below is historical draft copy, not current publication copy.
+Revised for Luke Payne on September 29, 2026. This is a local strategy and copy draft for personal GitHub and the existing portfolio website. Implementation and evaluation are complete; use RESULTS.md, RELEASE_STATUS.md and the release assets for verified claims. Planned-stage wording below is historical draft copy, not current publication copy.
 
 Lead with the useful system: an open-source, customizable chatbot that chooses appropriate ML approaches for a question, runs them, and uses recorded evidence in the conversation. Support that promise with an exercised extension example, reproducible comparisons, failures and clear limits.
 
@@ -13,7 +13,7 @@ Lead with the useful system: an open-source, customizable chatbot that chooses a
 | Proposed repository name | `llm-tool-calling-lab` |
 | Proposed portfolio route | `/projects/llm-tool-calling-lab/` |
 | Category | Applied AI systems and evaluation |
-| Current status | Implementation in verification; see RELEASE_STATUS.md |
+| Current status | Experimental v0.1.0 package; see RELEASE_STATUS.md and RESULTS.md |
 | Primary audience | Developers exploring or building chatbots with specialist ML tools |
 | Secondary audience | Engineers and hiring managers assessing Luke's implementation and experimental judgment |
 

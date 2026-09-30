@@ -1,6 +1,10 @@
 # LLM Tool Calling Lab Evaluation Plan
 
-Prepared September 29, 2026. Proposed protocol to be finalized on development cases, frozen at build hour 26, then executed. No evaluation has been run.
+Prepared September 29, 2026. The protocol is implemented and the full campaign is complete: 168 required records, no missing episodes, and no pending qualitative reviews. The current campaign is `.lab/campaign-v0.1-r2`, frozen at source commit `6495a339fdfe1b02140540b49257bf0fc5a697e2`, using all four families, the installed Qwen3 digest, and fresh seed offset 100000. Current results and release readiness are recorded in RELEASE_STATUS.md.
+
+The first campaign is retained separately: a relative-path runner defect prevented every LLM request before inference. Its records, manifest, and exact source archive are preserved. The replacement fixes that harness path and uses fresh seeded data; it does not tune the model or prompts using held-out outcomes. These campaigns must never be pooled.
+
+Qualitative reviews are explicitly identified, unblinded AI assessments with per-episode rationale. No independent human review or human-user study is claimed. Review both turns; a later correct answer does not erase an earlier unsupported claim. Structural validity and qualitative completion are reported separately.
 
 ## Questions the evaluation answers
 
@@ -107,7 +111,7 @@ Independent executable checks should inject an invalid tool argument and a model
 
 Record model and package versions, case ID, seed, prompts, task plan, candidate IDs/settings, data-partition fingerprints, tool outputs, artifact IDs, retries, errors, elapsed time and usage. Record cost when known; otherwise mark it unavailable. Local inference is not costless simply because no API charge is recorded.
 
-The proposed initial cap is two candidate fits, eight tool calls, six LLM responses, one repair attempt inside those limits and 180 seconds per episode. Set cumulative token and spending caps using the first backend smoke test; freeze them before held-out execution. If those caps prevent running the planned campaign, resize it before the freeze and report the new counts.
+The frozen cap is two candidate fits, eight tool calls, six LLM responses, one repair attempt inside those limits and 180 seconds cumulative system execution per episode, excluding human pauses. Follow-ups share the same allowance. The model context is 8192 tokens; generation is bounded to 1024 per response and 4096 per episode, including any reasoning tokens. Inference is local, with zero paid API calls and unmeasured hardware/electricity cost. No scope reduction was made for the replacement campaign.
 
 At the freeze, save a manifest of the supported-family list, datasets/generators, prompts, schema, model presets, backend, budgets, metrics, rubrics and case assignments. Final labels cannot be used for prompt revision, model selection or score-driven reruns.
 

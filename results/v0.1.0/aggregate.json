@@ -1,0 +1,2357 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-09-30T00:18:11.773256+00:00",
+  "campaign": "campaign-v0.1-r2",
+  "model": "qwen3:14b-q4_K_M",
+  "seed_offset": 100000,
+  "manifest_sha256": "dfaed254f55edb3fb252fc8160255b39f8144d0c2ccecdf8ffbd723c5edcc486",
+  "record_sha256_at_read": {
+    "c000_generic_0": "78685b1a1882bd69652dbc79b741e786bdf19ec8ca6eac66b5e06fd31815484d",
+    "c000_reference_0": "72039fe8aa8247d17b18dbbb3131ee363e93137924e6cc6874a9ab380a8239f8",
+    "c000_structured_0": "4dd795dbccf965df837311d85f99da434f3a44a102f44f7c183756bdeaf319a2",
+    "c001_generic_0": "80ca90f453cdb55712631eaf55633d462ad4a206d98e41de92a92f2361069645",
+    "c001_reference_0": "028e540d9be69128f20c44d2dc0649f94489746cc0301ade499e694126ed404b",
+    "c001_structured_0": "480e1c1e34e05acb233e898e80614e7d4b8f62a19c9ca920db9c26a8c7a3967b",
+    "c010_generic_0": "6a9a60106bbbde64eb0df3a0ae3329c373a1d5585c7f1b5e0032f394ed795466",
+    "c010_reference_0": "c8bb9abe45c1279c09643698a331e575803fa97602b4c277c609b4855e537658",
+    "c010_structured_0": "737e19e7d1c05b9384b903fcc8db31c102224fceba4deca6fc6029de8d732ae7",
+    "c011_generic_0": "22b6a8ea7ec5a48a9febd5c2f6279f3fa8af0503c8a03a70c419a1c92ead86fa",
+    "c011_reference_0": "5bc1fe7dc75dae7daced23a410b28126ac3180eaeb92c528e149412099e10282",
+    "c011_structured_0": "de36e7cf6be5bb41ab49bbc4dd39f56d5e42d5df35bb24ac584583d4e78b48e2",
+    "c020_generic_0": "9c0a315aa0302b995807a72eb288bb378179561f3efc09f46509a893cdae69b4",
+    "c020_reference_0": "1fe86cf494c30902d14c6b72a996c1ba0c77dc74f56c6805dfa5fa24bcb04c24",
+    "c020_structured_0": "e766821e9d1a0d03facbe2faf82dbee5d5459c88a7cbe7fd7ebc066538850616",
+    "c021_generic_0": "358f0505be5d1052abaf61cb45962d3d26a76bd8687cecebcb8f9d9d0cff90f0",
+    "c021_reference_0": "049f4e9fe27c4364b8d04b5e97f58e311cb82c7df21db63480604a9abb7e6d03",
+    "c021_structured_0": "9c0760ee3d09040a85a170904c742984f2cf9614a46c241646d49201da4b4f56",
+    "c030_generic_0": "a40250760f37182f85302870e8c62844ee79e0f494bdd9a0d06498b39689deba",
+    "c030_reference_0": "a402b15cc0789ffc5684e4e6c73777aab0e0a085fbcdfb3dd0357a79bd0f25a7",
+    "c030_structured_0": "0e7c2f5ac56a45da9872f712568532fc26edf6e0fc075ba5b0c263728eb95eea",
+    "c031_generic_0": "919a3fdf6610925bbf8b1f7c759570456e0cc80f3a92c9a630770eac177080c9",
+    "c031_reference_0": "3622ce50f138b8a89718ed3e57034caf05f9cab45d6a9f6329c62aa4d08cca93",
+    "c031_structured_0": "90beb6db269999ad9b3e2acce0ca978a246f1b24f1c9abe00b186f1724d74e93",
+    "c100_generic_0": "76c8125e7e7c9935e0210aeb7612df7822d7a4336cb33b54928ed6c3b7c7dcf3",
+    "c100_generic_1": "22ae06981f5ff4cfa707c9ec98b06f97a4565d6b55dd9c2ff0ab42a1cddcdacc",
+    "c100_reference_0": "933d22d2b9e3dd31f8d7528ab5b98521c871262a208b4bf0f0a6cba8715daad9",
+    "c100_structured_0": "a9abe125adaddfba60e09120e46c22cae51d66ae63dd148fae9f13b9a4028435",
+    "c100_structured_1": "4f00fea538993aad2c68eb7a097fb52f1b686bda6c43f1c25bfcbf2b40029a1e",
+    "c101_generic_0": "6a5de494030eaffef273ffccdb0d0003585d73599573b2d283dcef689238f17a",
+    "c101_generic_1": "347910749f7e1b5cdd8e1dcdaa81073622080d071ef15719a1bd4d922aee92e8",
+    "c101_reference_0": "3ab34c397dd64c2e69bd40b7ac9a0e61e3c9437e31f6bfe577857bfb7927cc73",
+    "c101_structured_0": "2c21fd54c1216c23b9b3dd2a250fe3f4f3d6b8bbbc28a006e694b6dab554fa65",
+    "c101_structured_1": "b820647a740fac033deda16be9f243c546ac41c522c6184baea6775cce965f43",
+    "c102_generic_0": "cee9853cbf913cdbe5b1953efaa9b7ff41f6cc5dfad4dec72755528fb117e674",
+    "c102_generic_1": "c022b5001eb70bcaa133e4652689848bb5ac68a3c2a82c7485fd2630669f0963",
+    "c102_reference_0": "19be2264bc3e858e38a12f860705b0e3a0b0c50e32393d5869ab1f1c4f506044",
+    "c102_structured_0": "f9f8c6805646aa3877b72f376517bc458e22bbe6d15ccc16f86b4c4a741773fd",
+    "c102_structured_1": "d2343522a66d7cf32d9ebd1c86a2a87aa896c09ec05d5b806a860dfa08175d16",
+    "c103_generic_0": "f929e2b9dfdc9a2d53d9a868c1746aa59e8e8c1b7af73c0230197c68cc4d1728",
+    "c103_generic_1": "24ea1eb91f84c75632c7687630b7c330c6ee87947b221eb9819207130aea319f",
+    "c103_reference_0": "ad03ff497c89b31a20bbb068042a6eb7d77c85a70f9fd0e68fcb92411aa29223",
+    "c103_structured_0": "c6a8b6fa8416202e786531e453071c6a8753cbf97bc84a818cf8366b5306331a",
+    "c103_structured_1": "96846c938efe4705d3ee15e2e9ca0069afe88cf8959132394b1e8cf0f75b42c5",
+    "c104_generic_0": "85bfab87bf97b6e7a7348927ba10c676a59eb145b843d0749bfb12913319c07e",
+    "c104_generic_1": "a4f9265c7f50aeba3795df44dadff71944c6e332ac19bebce380bf4fae810f4d",
+    "c104_reference_0": "c8943839bf920ae7e1c459ada17ad51c84974e7833c39cb05ecc5ea185c6dd91",
+    "c104_structured_0": "7d1fd77cf5e375a4afdef9ecf3237fa5bdf1b8dbe2c031c0bb5f2cb9bd5c2021",
+    "c104_structured_1": "55455b34a5ab28c759709c1d0b3e1db1a9e35709f5551cd550accb4f52ca18a3",
+    "c105_generic_0": "bdcf8dd6c6fa2c6509cae7e48d9103978da240b7fea3cf78264ddb82b39743c3",
+    "c105_generic_1": "221a5724e70a483ae81a8ff92089f4649eaea8721a9230a050e268c84766af85",
+    "c105_reference_0": "2f0d98780a572fd5b39a00379a98f7049e3e4f340862c2d0b0f6ba2b4158b0fb",
+    "c105_structured_0": "8d2527a229d25824854ecaf0f830ad1f8f8311a4b90ab5e16972fc7a01519f58",
+    "c105_structured_1": "4830aecda04127503b2637962b0f4c32a017f9f3e0d27d4f7bd1b06888381b59",
+    "c110_generic_0": "9e45383914b3f4a31b7c2c14918a598e070865ed9b01046d1e10e5028837a108",
+    "c110_generic_1": "81d2a2388ec40336d8ee027cf5ec0dff8e0edc4edfdf34e31242e42580246c21",
+    "c110_reference_0": "b8800d51def7fa63d683b744e3a72bd8699633fda2e90fa5b1eedb737061adeb",
+    "c110_structured_0": "f426aa37e60a0050e2b208949de50795915ed82b2b30ff3cf40b0ed4094b7ca4",
+    "c110_structured_1": "4ffe5496b2f00fda146ea6e30973fbcde60f4cbd6e8521ef6c3ec7d28d6a333d",
+    "c111_generic_0": "74221a4a9f9b188713a43da9e99cb3b40e6b841c8666d662b15a2e4767f7f67b",
+    "c111_generic_1": "0c34f2a793b54bdb41f63323bc8d6ad8c3436c7e4757c112567fa05be298afad",
+    "c111_reference_0": "0cc51e24574bb1bc4a8a9cdcd565913629974136ee62d726faf1572979577150",
+    "c111_structured_0": "84fbb86d4f57313576fb4d28dc09df36d0e0a74d19a0f62700a632fc7842c801",
+    "c111_structured_1": "3f47ff72ed6ab86df57605791351e9087f71ab44be7544a69b02fa923de9a534",
+    "c112_generic_0": "87860d2a4a3d8434c611256bbe21dcc3d4a330816f9ba212756a051d2060d486",
+    "c112_generic_1": "285426fab26e109df1b03f2e68eb10085a8b45f45ce71997b7d99f27b2c14edb",
+    "c112_reference_0": "420febf80c391d6a691b7c8d389a9c8d958e0708490b5007fe49a3f298463b95",
+    "c112_structured_0": "bfd9a87db6695b2d5a467eb0f2d2c84652d0df217c449dfd6ebb769e3ed83b97",
+    "c112_structured_1": "b85d3037cfbf1a7887b1f46f2e1032bd613d79ee9ac1dab86b09fdf29c1db579",
+    "c113_generic_0": "591940059fb2a4482bdbf6c9f7b8e60728ab27ae20ec4f80fb63254eefd98579",
+    "c113_generic_1": "53555b6bef1aaf20c25ae27fb40c75d90939532ac6b9f6f5f8701b499cf9245d",
+    "c113_reference_0": "c4dcddb95c3589b894ba3c7c5ccdc099427936644055f393cc0eb9cb95a22772",
+    "c113_structured_0": "384b04bee6bb61ba7892e4d1ea8118c37895f4e60c9bfa50d0c9b7a306612968",
+    "c113_structured_1": "42f3eab9b50e87afad923bc83fdbfa38056a9e1cfc72a494a6b0ddf0e4d3e4e1",
+    "c114_generic_0": "c8af72ab6724d9b053d38b610061fda26aeac9ffd0c7b6caa9b78c45f9316916",
+    "c114_generic_1": "ff2b62ab52e14dbc5e3971161d31153382bf4f23ca681114ee07c858a1f77c38",
+    "c114_reference_0": "1bfc7c6e3f2d2e83bd55324b08a761df375f6b773511fcdeff3117bae949bdaf",
+    "c114_structured_0": "9c76c3151f148fffcad1174fa499fddfb22e4721015b078264f13f576eb0fae7",
+    "c114_structured_1": "a8d5ba78f815f1a4a97897147e859a6be7f697ababead017528b13d7ab11b573",
+    "c115_generic_0": "fb2a2ce9fcc98b492eea741de1d4f89d0920fdf07ca0a30cfe89ca45a31462be",
+    "c115_generic_1": "edcdd24520e5137df4720d9bb1c0c493048aba081ba753c2194ba10586a83328",
+    "c115_reference_0": "27f4bd1ff7fbf764aaac80b0355a9e62044c7a501aa74431f8fc13ed1dceb4bc",
+    "c115_structured_0": "f8d4afba7aa18e07add13f18bf58ece12be550e7508ada03f3276ce07cd8c744",
+    "c115_structured_1": "e06db65940ec4d8eaf9861cc2697b301bfd38f9e19d10757931d5010fc8ce875",
+    "c120_generic_0": "9f91ac184c34a5596f9b01aa4592cc5ef49fc6d07f8780b6bf0675f4371d504c",
+    "c120_generic_1": "71b1848c673d99f98a78c3820513aad48e4386ab2988656bbaf35c618595c374",
+    "c120_reference_0": "f3c35ff32d0a3102632840b5fe1a9f0d5df985ad8262cbf8d1b1c2ed01275fd5",
+    "c120_structured_0": "8cc8d34dccea0e0b6636269d341222be1f141756fd49f5ed34d3042c7d5a6cc2",
+    "c120_structured_1": "f133a8a821929b1940a20f4dcf88c89a8241d2055afc60403097e5bd402b32b3",
+    "c121_generic_0": "b965e69067d653cb709d07e904c135869792114e90746b35f56447dbeea739b3",
+    "c121_generic_1": "e6a5a8c20e1cdb4f62a8c9bc886ffe6344b287f7fec2a62cfda731560f3f61cf",
+    "c121_reference_0": "c181832321bbcbaf5a6383e7e3d0e518298afa84e936b3bd03a62f4252f24ca2",
+    "c121_structured_0": "56430ada41bbd95cc88e48301197e0f2ffeaf4873ef05e8000d094b50369a485",
+    "c121_structured_1": "ca97b606b537aace59a0eba37fa671b6eaf33d3b0e2d345c962239642f0ab8ad",
+    "c122_generic_0": "63496556cb42ead001fa8580eb1e4e63efd49bdc1afdaaed1dab8fb6d314cfe7",
+    "c122_generic_1": "14b6c180c3b7df8dae8d9bf50a68b0b70a97d1262fcf49963d835dd67a79b74f",
+    "c122_reference_0": "62185d996f6f45a9a2400319bfaf04305f606efe7bd1af8911208e324a04e9a7",
+    "c122_structured_0": "ed08a5dc5fa60a62f351d4621c529b1a5470826a4e6c76d35430c1446cafc3a9",
+    "c122_structured_1": "d03fe7686dbf4715176c82ae68ea53b6c62846cc1bf0cd86606df282d3423422",
+    "c123_generic_0": "e55661e1e3da8d2dac9ca9873f69fda417f70be2860c8ba8e82200005f76a0f4",
+    "c123_generic_1": "da705af739598aa3315731ffc87cfcff8bfac55a5456477cc5a51a74ce1276b6",
+    "c123_reference_0": "2cf4f60194a41993621b6453993ba0a6350d47a179dff4d1964b27a95641e03e",
+    "c123_structured_0": "1fa64410588450f603b25a2e984fa9264e14e2026b7bf7f1eb609c98b36fcc1b",
+    "c123_structured_1": "ccc4b433a45419af141e0657a44adfea5cb1e3cf996db2cde8881cb38cf68ef9",
+    "c124_generic_0": "17b25b30f40dd69c24bf406d104458477084d0281a2016c81e44a65aaebb22bd",
+    "c124_generic_1": "58de3b4182a861a8dfa5204f44df880f23f5d205e632b990c4138c22b34acae7",
+    "c124_reference_0": "f0d2cbdc48a480cde97823c8bcccab852b091e7f58a2e610897ef07b96817905",
+    "c124_structured_0": "1cf37a608e6645d7fb6286aa1d3384d07e5100867b695dfdbf0cee7fa413e71a",
+    "c124_structured_1": "4a93db7827436893b3d0c84b72f5c1847acec1dcbdcd486fc5bfbb6bedef60c6",
+    "c125_generic_0": "69b1c75cb20b9fb3267a52c0b0b12ce648193a17a04bfc56e1bbf700bc401b03",
+    "c125_generic_1": "c91ee10950e0ca913ec468307067e81a78170073242e22d748004b2249ed1ada",
+    "c125_reference_0": "c00f7df15d62b2bd4403c0b03ef1f1fb479cfc00e14571e95641725a7daf8ea3",
+    "c125_structured_0": "957af5109640a153c72b8e69e484da5ec284b8f18c1990dd1ec9ea5ff668337e",
+    "c125_structured_1": "e7529035a276e8c0cafee048efe28c6efe41baeea8925bd692c61553db9190ad",
+    "c130_generic_0": "88fe5ddef91b2feb72693d9c6635381940428edef2aeb7740cea89cd4a47ce38",
+    "c130_generic_1": "5b99ededb1d367731300ea90c01e8ad8771543f34aea3d84b50d6843120762ba",
+    "c130_reference_0": "7f05c2973eaaff2670d5ddc624514cdc7e36db425c59b1d1fea67e6b9b1c6468",
+    "c130_structured_0": "df2ef4e88d4f4b5189fd33247e426368067221f8fca2e9ce0ef079c25e032c86",
+    "c130_structured_1": "7240cea22180cbfb2266da73d64b0a58be84b9740b6a46dad1a8ebe1d6db7d53",
+    "c131_generic_0": "e211f2b7e7048ac42207c595ee3e56028f6eaf5789b903fde9098621a069d19f",
+    "c131_generic_1": "183ca70d0fc006c232a5293b341423b3b958605187174a88d5f7b10ea1cc414f",
+    "c131_reference_0": "2105d0ce709ee29c5ae043c9b2bcdcdaa7023d1bc4658621990372c796d15f4d",
+    "c131_structured_0": "43bbb183c1d702aa82184fd7f6e0d89b908d2d4415780d7c4aacfa3a3fda7ac7",
+    "c131_structured_1": "a87c1d2f18960d08b5efc0f4d676fab21aaf1155a82541532359c1656119d48c",
+    "c132_generic_0": "a116f33a068d13e61ca0e790c32b2c9ff3ddffb84f73aaa0c237911b498cae61",
+    "c132_generic_1": "1942dfd2ea1dcd6c7d78d170a761226a721670fff500696e02a68ff5ba0fcfdb",
+    "c132_reference_0": "86bc0f6c206e4e54a49ec5e809e59b53da8e300177c3871724782fc1f30d418d",
+    "c132_structured_0": "251647fb67c3716cb7a7609062476ab69feb91b28718971ce0540b9a456fe4b2",
+    "c132_structured_1": "7b6ed2949e39f3903a404ac0ee62ecaa0fc1e28d299b271514976725845e3864",
+    "c133_generic_0": "97c39fc53a51877e94d75df19648c2490ce330abbdfc71dd5f8ccd711d5a5a1a",
+    "c133_generic_1": "14e8ec52c0353b8e4cfff26773acbdb11c6c71c68fd8d3cbad2947c45914360d",
+    "c133_reference_0": "afcfe9ce55d955864165746feba215bed0d11e88e84584114168fa61e2ec8d6a",
+    "c133_structured_0": "841b2997f3e27289c881f60d3b735cd6171b1baf7cbe90134172b347fc563131",
+    "c133_structured_1": "6d37ab86d026aa5c781c8fab52a57ba01e97a89b7f98fe4747001233c452c7b5",
+    "c134_generic_0": "c431f6bb053b7fd8ff4e250385d5f7302cde3f0e715927c7c85ff8b1c7bdb329",
+    "c134_generic_1": "54630f268bee08855ca78b60cebceffd47e7930e38824df4d6cc520b0ebb68db",
+    "c134_reference_0": "26416719d93aa33b0c23bdd7d49122966e21a509e0377b14b1f6aa7dab4bdbb6",
+    "c134_structured_0": "d7098e01682a9a0998506b6824d3a372edaadc9f4e21797b3e948895dd86e12c",
+    "c134_structured_1": "ef77dc6c00d9bed40f6f1d247e8e619ad3d9386f9eea094006c4e47c3f15ddaa",
+    "c135_generic_0": "b4ae4dfe295ba9b7e32804a8b55b56390e0cc078fa9bea8f911662f41ded970c",
+    "c135_generic_1": "08d7a4dffc925c84bb7be7940add517c36f5d495bbbadde3e566515dc1814d10",
+    "c135_reference_0": "fd3c7d91245f4aefc81b565fbce3317112961c3ef7e66531e0e21094137f2dc6",
+    "c135_structured_0": "2c595ac00bdae72ba3f45d891c05e1e178c9b5cc0de21a05e6dfbbd74867151d",
+    "c135_structured_1": "fac3fd0fd87c5ef58023b3c8019377d24c6e648f13550160a4f7d06549162932",
+    "c300_generic_0": "197bf6a44de287bd093654679164c591c20eb0b4cdc9838d6a440ad27fc45a22",
+    "c300_generic_1": "0a279fed6e14c0c0454cf62653b93f2e2c0172fb89cbe0ce22f83674e9250d63",
+    "c300_structured_0": "b519c872398e879e78bfa4b75137696c9597d3e6edf4a2ced4c929b32db91fda",
+    "c300_structured_1": "9360c957ac46f23032e1d16d6fe1ab0b6c08e28aa990f021f13f2009aa5511a0",
+    "c301_generic_0": "a7ce45385cf11ad01e1bfcbcf11c14c70b63308811888951c48d54d10a832b8e",
+    "c301_generic_1": "f06c6a64d67cffeca547a0a9a15643a355b55e26509c4a743a8f3ce8f6bc915d",
+    "c301_structured_0": "ad169a44c89757acacb96880111c27d7cb49b81233a42c7c4d30ff83fce1d077",
+    "c301_structured_1": "d87cea39d0e3cea557b84320bdd7ce610fb0cc8a809592427d527caef4398e95",
+    "c302_generic_0": "d65016269b4c4535c40d0b2ee4deb4608714e5e90335f1ce391056e08450ce6e",
+    "c302_generic_1": "43c8480652b92fa45b61cf765b9e01fee1df1f0f99cbd2864bbfdf704f28c165",
+    "c302_structured_0": "ad2bb64b789144f5ccdcaf2e79d68f1df249239927cadaa6246787e3e4107ab3",
+    "c302_structured_1": "1b19325002243d95555c219d47870cac899b248a1ccad8bd330fda696314ff63",
+    "c303_generic_0": "ec87a52eb187355aa4827d0a8b1c6c070cb405540bb4c2bb6dc462820c5c84e5",
+    "c303_generic_1": "978940e4cfe5ed46fb52dbfbd52a696419c1dd1be0d34b2f1920bf184bdf2f2c",
+    "c303_structured_0": "ea0bfa2b401d24fd8360eaa806fc58cb064b3dad7a875fdd298baf4083ce0912",
+    "c303_structured_1": "fdd17bcdcb8477b8837268225ea9a6eaf383729d12b9109d3afb8bf3e68031ff",
+    "c304_generic_0": "922cdf131da209b99053fd42b0af0d5fd85188399f8ef6055aabf01d3c6d6701",
+    "c304_generic_1": "c2905b4d675021dc8e4ab38052caace7cae53aca45538d72f1f200487ab30b4f",
+    "c304_structured_0": "10c89a2377c3d1876a921c38991abc41d5e4e36637c77e30137dbe679036976b",
+    "c304_structured_1": "d53ef5acdc6631612fbba92345050aad3f92d426309d873c8e62557621b8972a",
+    "c305_generic_0": "408941f3cad51d755da857fbd18336ac260f6c1f58ebd4ca400f5bb809a59206",
+    "c305_generic_1": "9fdad57be647f3cda8df3e0acd92a16eddecd222ffa00125ba727d2f72d1507c",
+    "c305_structured_0": "edc964f7f4211133385cf74f5e3d3ce276cc38a61445508743cd4d8cb4cacaad",
+    "c305_structured_1": "7f5d00ce24d72d91967d959f45b49e2b4a788a8e9630b058a57578b976cc8119"
+  },
+  "snapshot_note": "Records are read atomically one at a time. A running campaign may advance after this snapshot.",
+  "required_expected": 168,
+  "required_completed": 168,
+  "required_running": 0,
+  "required_missing": 0,
+  "complete_execution": true,
+  "qualitative_pending": 0,
+  "missing_episode_ids": [],
+  "running_episode_ids": [],
+  "groups": [
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "generic",
+      "expected": 12,
+      "completed": 12,
+      "not_completed": 0,
+      "structural_passes": 9,
+      "machine_failures": 3,
+      "primary_passes": 7,
+      "primary_failures": 5,
+      "pending_review": 0,
+      "reviewed_episodes": 9
+    },
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "structured",
+      "expected": 12,
+      "completed": 12,
+      "not_completed": 0,
+      "structural_passes": 8,
+      "machine_failures": 4,
+      "primary_passes": 4,
+      "primary_failures": 8,
+      "pending_review": 0,
+      "reviewed_episodes": 8
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "generic",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 0,
+      "machine_failures": 2,
+      "primary_passes": 0,
+      "primary_failures": 2,
+      "pending_review": 0,
+      "reviewed_episodes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "reference",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 2,
+      "machine_failures": 0,
+      "primary_passes": null,
+      "primary_failures": null,
+      "pending_review": 0,
+      "reviewed_episodes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "structured",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 1,
+      "machine_failures": 1,
+      "primary_passes": 1,
+      "primary_failures": 1,
+      "pending_review": 0,
+      "reviewed_episodes": 1
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "generic",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 2,
+      "machine_failures": 0,
+      "primary_passes": 1,
+      "primary_failures": 1,
+      "pending_review": 0,
+      "reviewed_episodes": 2
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "reference",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 2,
+      "machine_failures": 0,
+      "primary_passes": null,
+      "primary_failures": null,
+      "pending_review": 0,
+      "reviewed_episodes": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "structured",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 2,
+      "machine_failures": 0,
+      "primary_passes": 2,
+      "primary_failures": 0,
+      "pending_review": 0,
+      "reviewed_episodes": 2
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "generic",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 2,
+      "machine_failures": 0,
+      "primary_passes": 2,
+      "primary_failures": 0,
+      "pending_review": 0,
+      "reviewed_episodes": 2
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "reference",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 2,
+      "machine_failures": 0,
+      "primary_passes": null,
+      "primary_failures": null,
+      "pending_review": 0,
+      "reviewed_episodes": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "structured",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 2,
+      "machine_failures": 0,
+      "primary_passes": 2,
+      "primary_failures": 0,
+      "pending_review": 0,
+      "reviewed_episodes": 2
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "generic",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 2,
+      "machine_failures": 0,
+      "primary_passes": 1,
+      "primary_failures": 1,
+      "pending_review": 0,
+      "reviewed_episodes": 2
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "reference",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 2,
+      "machine_failures": 0,
+      "primary_passes": null,
+      "primary_failures": null,
+      "pending_review": 0,
+      "reviewed_episodes": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "structured",
+      "expected": 2,
+      "completed": 2,
+      "not_completed": 0,
+      "structural_passes": 2,
+      "machine_failures": 0,
+      "primary_passes": 1,
+      "primary_failures": 1,
+      "pending_review": 0,
+      "reviewed_episodes": 2
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "generic",
+      "expected": 12,
+      "completed": 12,
+      "not_completed": 0,
+      "structural_passes": 4,
+      "machine_failures": 8,
+      "primary_passes": 3,
+      "primary_failures": 9,
+      "pending_review": 0,
+      "reviewed_episodes": 4
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "reference",
+      "expected": 6,
+      "completed": 6,
+      "not_completed": 0,
+      "structural_passes": 6,
+      "machine_failures": 0,
+      "primary_passes": null,
+      "primary_failures": null,
+      "pending_review": 0,
+      "reviewed_episodes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "structured",
+      "expected": 12,
+      "completed": 12,
+      "not_completed": 0,
+      "structural_passes": 4,
+      "machine_failures": 8,
+      "primary_passes": 2,
+      "primary_failures": 10,
+      "pending_review": 0,
+      "reviewed_episodes": 4
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "generic",
+      "expected": 12,
+      "completed": 12,
+      "not_completed": 0,
+      "structural_passes": 12,
+      "machine_failures": 0,
+      "primary_passes": 11,
+      "primary_failures": 1,
+      "pending_review": 0,
+      "reviewed_episodes": 12
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "reference",
+      "expected": 6,
+      "completed": 6,
+      "not_completed": 0,
+      "structural_passes": 6,
+      "machine_failures": 0,
+      "primary_passes": null,
+      "primary_failures": null,
+      "pending_review": 0,
+      "reviewed_episodes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "structured",
+      "expected": 12,
+      "completed": 12,
+      "not_completed": 0,
+      "structural_passes": 12,
+      "machine_failures": 0,
+      "primary_passes": 10,
+      "primary_failures": 2,
+      "pending_review": 0,
+      "reviewed_episodes": 12
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "generic",
+      "expected": 12,
+      "completed": 12,
+      "not_completed": 0,
+      "structural_passes": 12,
+      "machine_failures": 0,
+      "primary_passes": 12,
+      "primary_failures": 0,
+      "pending_review": 0,
+      "reviewed_episodes": 12
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "reference",
+      "expected": 6,
+      "completed": 6,
+      "not_completed": 0,
+      "structural_passes": 6,
+      "machine_failures": 0,
+      "primary_passes": null,
+      "primary_failures": null,
+      "pending_review": 0,
+      "reviewed_episodes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "structured",
+      "expected": 12,
+      "completed": 12,
+      "not_completed": 0,
+      "structural_passes": 12,
+      "machine_failures": 0,
+      "primary_passes": 12,
+      "primary_failures": 0,
+      "pending_review": 0,
+      "reviewed_episodes": 12
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "generic",
+      "expected": 12,
+      "completed": 12,
+      "not_completed": 0,
+      "structural_passes": 12,
+      "machine_failures": 0,
+      "primary_passes": 7,
+      "primary_failures": 5,
+      "pending_review": 0,
+      "reviewed_episodes": 12
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "reference",
+      "expected": 6,
+      "completed": 6,
+      "not_completed": 0,
+      "structural_passes": 6,
+      "machine_failures": 0,
+      "primary_passes": null,
+      "primary_failures": null,
+      "pending_review": 0,
+      "reviewed_episodes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "structured",
+      "expected": 12,
+      "completed": 12,
+      "not_completed": 0,
+      "structural_passes": 12,
+      "machine_failures": 0,
+      "primary_passes": 7,
+      "primary_failures": 5,
+      "pending_review": 0,
+      "reviewed_episodes": 12
+    }
+  ],
+  "review_diagnostics": [
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "generic",
+      "check": "specific_limitation_or_clarification",
+      "passes": 7,
+      "reviewed_denominator": 9,
+      "machine_failures": 3,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "generic",
+      "check": "appropriate_next_step",
+      "passes": 7,
+      "reviewed_denominator": 9,
+      "machine_failures": 3,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "generic",
+      "check": "faithful_claims",
+      "passes": 7,
+      "reviewed_denominator": 9,
+      "machine_failures": 3,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "structured",
+      "check": "specific_limitation_or_clarification",
+      "passes": 6,
+      "reviewed_denominator": 8,
+      "machine_failures": 4,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "structured",
+      "check": "appropriate_next_step",
+      "passes": 4,
+      "reviewed_denominator": 8,
+      "machine_failures": 4,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "structured",
+      "check": "faithful_claims",
+      "passes": 6,
+      "reviewed_denominator": 8,
+      "machine_failures": 4,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "generic",
+      "check": "appropriate_task_target",
+      "passes": 0,
+      "reviewed_denominator": 0,
+      "machine_failures": 2,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "generic",
+      "check": "valid_required_output",
+      "passes": 0,
+      "reviewed_denominator": 0,
+      "machine_failures": 2,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "generic",
+      "check": "faithful_claims",
+      "passes": 0,
+      "reviewed_denominator": 0,
+      "machine_failures": 2,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "generic",
+      "check": "relevant_followup",
+      "passes": 0,
+      "reviewed_denominator": 0,
+      "machine_failures": 2,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "generic",
+      "check": "appropriate_limits",
+      "passes": 0,
+      "reviewed_denominator": 0,
+      "machine_failures": 2,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "structured",
+      "check": "appropriate_task_target",
+      "passes": 1,
+      "reviewed_denominator": 1,
+      "machine_failures": 1,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "structured",
+      "check": "valid_required_output",
+      "passes": 1,
+      "reviewed_denominator": 1,
+      "machine_failures": 1,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "structured",
+      "check": "faithful_claims",
+      "passes": 1,
+      "reviewed_denominator": 1,
+      "machine_failures": 1,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "structured",
+      "check": "relevant_followup",
+      "passes": 1,
+      "reviewed_denominator": 1,
+      "machine_failures": 1,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "structured",
+      "check": "appropriate_limits",
+      "passes": 1,
+      "reviewed_denominator": 1,
+      "machine_failures": 1,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "generic",
+      "check": "appropriate_task_target",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "generic",
+      "check": "valid_required_output",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "generic",
+      "check": "faithful_claims",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "generic",
+      "check": "relevant_followup",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "generic",
+      "check": "appropriate_limits",
+      "passes": 1,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "structured",
+      "check": "appropriate_task_target",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "structured",
+      "check": "valid_required_output",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "structured",
+      "check": "faithful_claims",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "structured",
+      "check": "relevant_followup",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "classification",
+      "condition": "structured",
+      "check": "appropriate_limits",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "generic",
+      "check": "appropriate_task_target",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "generic",
+      "check": "valid_required_output",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "generic",
+      "check": "faithful_claims",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "generic",
+      "check": "relevant_followup",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "generic",
+      "check": "appropriate_limits",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "structured",
+      "check": "appropriate_task_target",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "structured",
+      "check": "valid_required_output",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "structured",
+      "check": "faithful_claims",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "structured",
+      "check": "relevant_followup",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "clustering",
+      "condition": "structured",
+      "check": "appropriate_limits",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "generic",
+      "check": "appropriate_task_target",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "generic",
+      "check": "valid_required_output",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "generic",
+      "check": "faithful_claims",
+      "passes": 1,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "generic",
+      "check": "relevant_followup",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "generic",
+      "check": "appropriate_limits",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "structured",
+      "check": "appropriate_task_target",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "structured",
+      "check": "valid_required_output",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "structured",
+      "check": "faithful_claims",
+      "passes": 1,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "structured",
+      "check": "relevant_followup",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "development",
+      "family": "regression",
+      "condition": "structured",
+      "check": "appropriate_limits",
+      "passes": 2,
+      "reviewed_denominator": 2,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "generic",
+      "check": "appropriate_task_target",
+      "passes": 4,
+      "reviewed_denominator": 4,
+      "machine_failures": 8,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "generic",
+      "check": "valid_required_output",
+      "passes": 4,
+      "reviewed_denominator": 4,
+      "machine_failures": 8,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "generic",
+      "check": "faithful_claims",
+      "passes": 4,
+      "reviewed_denominator": 4,
+      "machine_failures": 8,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "generic",
+      "check": "relevant_followup",
+      "passes": 3,
+      "reviewed_denominator": 4,
+      "machine_failures": 8,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "generic",
+      "check": "appropriate_limits",
+      "passes": 4,
+      "reviewed_denominator": 4,
+      "machine_failures": 8,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "structured",
+      "check": "appropriate_task_target",
+      "passes": 4,
+      "reviewed_denominator": 4,
+      "machine_failures": 8,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "structured",
+      "check": "valid_required_output",
+      "passes": 4,
+      "reviewed_denominator": 4,
+      "machine_failures": 8,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "structured",
+      "check": "faithful_claims",
+      "passes": 4,
+      "reviewed_denominator": 4,
+      "machine_failures": 8,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "structured",
+      "check": "relevant_followup",
+      "passes": 2,
+      "reviewed_denominator": 4,
+      "machine_failures": 8,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "structured",
+      "check": "appropriate_limits",
+      "passes": 4,
+      "reviewed_denominator": 4,
+      "machine_failures": 8,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "generic",
+      "check": "appropriate_task_target",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "generic",
+      "check": "valid_required_output",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "generic",
+      "check": "faithful_claims",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "generic",
+      "check": "relevant_followup",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "generic",
+      "check": "appropriate_limits",
+      "passes": 11,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "structured",
+      "check": "appropriate_task_target",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "structured",
+      "check": "valid_required_output",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "structured",
+      "check": "faithful_claims",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "structured",
+      "check": "relevant_followup",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "classification",
+      "condition": "structured",
+      "check": "appropriate_limits",
+      "passes": 10,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "generic",
+      "check": "appropriate_task_target",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "generic",
+      "check": "valid_required_output",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "generic",
+      "check": "faithful_claims",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "generic",
+      "check": "relevant_followup",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "generic",
+      "check": "appropriate_limits",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "structured",
+      "check": "appropriate_task_target",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "structured",
+      "check": "valid_required_output",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "structured",
+      "check": "faithful_claims",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "structured",
+      "check": "relevant_followup",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "clustering",
+      "condition": "structured",
+      "check": "appropriate_limits",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "generic",
+      "check": "appropriate_task_target",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "generic",
+      "check": "valid_required_output",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "generic",
+      "check": "faithful_claims",
+      "passes": 7,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "generic",
+      "check": "relevant_followup",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "generic",
+      "check": "appropriate_limits",
+      "passes": 8,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "structured",
+      "check": "appropriate_task_target",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "structured",
+      "check": "valid_required_output",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "structured",
+      "check": "faithful_claims",
+      "passes": 9,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "structured",
+      "check": "relevant_followup",
+      "passes": 12,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    },
+    {
+      "split": "heldout",
+      "family": "regression",
+      "condition": "structured",
+      "check": "appropriate_limits",
+      "passes": 8,
+      "reviewed_denominator": 12,
+      "machine_failures": 0,
+      "pending_structural_successes": 0
+    }
+  ],
+  "usage": [
+    {
+      "condition": "reference",
+      "field": "active_seconds",
+      "label": "Active seconds",
+      "mean": 1.4762187499945867,
+      "minimum": 1.3899999998975545,
+      "maximum": 1.5630000000819564,
+      "measured_episodes": 32,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "reference",
+      "field": "fits",
+      "label": "Candidate fits",
+      "mean": null,
+      "minimum": null,
+      "maximum": null,
+      "measured_episodes": 0,
+      "unavailable_episodes": 32,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "reference",
+      "field": "tool_calls",
+      "label": "Tool calls",
+      "mean": null,
+      "minimum": null,
+      "maximum": null,
+      "measured_episodes": 0,
+      "unavailable_episodes": 32,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "reference",
+      "field": "llm_responses",
+      "label": "LLM responses",
+      "mean": null,
+      "minimum": null,
+      "maximum": null,
+      "measured_episodes": 0,
+      "unavailable_episodes": 32,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "reference",
+      "field": "completion_tokens",
+      "label": "Accounted generated tokens",
+      "mean": null,
+      "minimum": null,
+      "maximum": null,
+      "measured_episodes": 0,
+      "unavailable_episodes": 32,
+      "estimated_token_usage_episodes": 0
+    },
+    {
+      "condition": "reference",
+      "field": "prompt_tokens",
+      "label": "Reported prompt/input tokens",
+      "mean": null,
+      "minimum": null,
+      "maximum": null,
+      "measured_episodes": 0,
+      "unavailable_episodes": 32,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "reference",
+      "field": "repairs",
+      "label": "Repairs",
+      "mean": null,
+      "minimum": null,
+      "maximum": null,
+      "measured_episodes": 0,
+      "unavailable_episodes": 32,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "generic",
+      "field": "active_seconds",
+      "label": "Active seconds",
+      "mean": 11.269323529429077,
+      "minimum": 3.0160000000614673,
+      "maximum": 19.20299999997951,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "generic",
+      "field": "fits",
+      "label": "Candidate fits",
+      "mean": 1.3970588235294117,
+      "minimum": 0,
+      "maximum": 2,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "generic",
+      "field": "tool_calls",
+      "label": "Tool calls",
+      "mean": 1.8235294117647058,
+      "minimum": 0,
+      "maximum": 3,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "generic",
+      "field": "llm_responses",
+      "label": "LLM responses",
+      "mean": 4.029411764705882,
+      "minimum": 2,
+      "maximum": 6,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "generic",
+      "field": "completion_tokens",
+      "label": "Accounted generated tokens",
+      "mean": 534.6470588235294,
+      "minimum": 190,
+      "maximum": 931,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": 0
+    },
+    {
+      "condition": "generic",
+      "field": "prompt_tokens",
+      "label": "Reported prompt/input tokens",
+      "mean": 14062.823529411764,
+      "minimum": 4960,
+      "maximum": 26425,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "generic",
+      "field": "repairs",
+      "label": "Repairs",
+      "mean": 0.3088235294117647,
+      "minimum": 0,
+      "maximum": 1,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "structured",
+      "field": "active_seconds",
+      "label": "Active seconds",
+      "mean": 10.922058823525303,
+      "minimum": 3.093000000109896,
+      "maximum": 19.54700000002049,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "structured",
+      "field": "fits",
+      "label": "Candidate fits",
+      "mean": 1.3676470588235294,
+      "minimum": 0,
+      "maximum": 2,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "structured",
+      "field": "tool_calls",
+      "label": "Tool calls",
+      "mean": 1.7647058823529411,
+      "minimum": 0,
+      "maximum": 3,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "structured",
+      "field": "llm_responses",
+      "label": "LLM responses",
+      "mean": 3.9558823529411766,
+      "minimum": 2,
+      "maximum": 6,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "structured",
+      "field": "completion_tokens",
+      "label": "Accounted generated tokens",
+      "mean": 526.2352941176471,
+      "minimum": 196,
+      "maximum": 930,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": 0
+    },
+    {
+      "condition": "structured",
+      "field": "prompt_tokens",
+      "label": "Reported prompt/input tokens",
+      "mean": 14094.132352941177,
+      "minimum": 5160,
+      "maximum": 26985,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    },
+    {
+      "condition": "structured",
+      "field": "repairs",
+      "label": "Repairs",
+      "mean": 0.3235294117647059,
+      "minimum": 0,
+      "maximum": 1,
+      "measured_episodes": 68,
+      "unavailable_episodes": 0,
+      "estimated_token_usage_episodes": null
+    }
+  ],
+  "failure_reasons": [
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "generic",
+      "reason": "invalid final answer or evidence citation",
+      "episodes": 1
+    },
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "generic",
+      "reason": "tool execution failed; repair allowance exhausted",
+      "episodes": 2
+    },
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "structured",
+      "reason": "invalid final answer or evidence citation",
+      "episodes": 2
+    },
+    {
+      "split": "challenge",
+      "family": "challenge",
+      "condition": "structured",
+      "reason": "tool execution failed; repair allowance exhausted",
+      "episodes": 2
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "generic",
+      "reason": "invalid final answer or evidence citation",
+      "episodes": 2
+    },
+    {
+      "split": "development",
+      "family": "anomaly",
+      "condition": "structured",
+      "reason": "invalid final answer or evidence citation",
+      "episodes": 1
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "generic",
+      "reason": "invalid final answer or evidence citation",
+      "episodes": 8
+    },
+    {
+      "split": "heldout",
+      "family": "anomaly",
+      "condition": "structured",
+      "reason": "invalid final answer or evidence citation",
+      "episodes": 8
+    }
+  ],
+  "heldout_case_primary_means": [
+    {
+      "case_id": "c100",
+      "family": "regression",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c100_generic_0",
+        "c100_generic_1"
+      ]
+    },
+    {
+      "case_id": "c100",
+      "family": "regression",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c100_structured_0",
+        "c100_structured_1"
+      ]
+    },
+    {
+      "case_id": "c101",
+      "family": "regression",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c101_generic_0",
+        "c101_generic_1"
+      ]
+    },
+    {
+      "case_id": "c101",
+      "family": "regression",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c101_structured_0",
+        "c101_structured_1"
+      ]
+    },
+    {
+      "case_id": "c102",
+      "family": "regression",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0.5,
+      "episode_ids": [
+        "c102_generic_0",
+        "c102_generic_1"
+      ]
+    },
+    {
+      "case_id": "c102",
+      "family": "regression",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0.5,
+      "episode_ids": [
+        "c102_structured_0",
+        "c102_structured_1"
+      ]
+    },
+    {
+      "case_id": "c103",
+      "family": "regression",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c103_generic_0",
+        "c103_generic_1"
+      ]
+    },
+    {
+      "case_id": "c103",
+      "family": "regression",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c103_structured_0",
+        "c103_structured_1"
+      ]
+    },
+    {
+      "case_id": "c104",
+      "family": "regression",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c104_generic_0",
+        "c104_generic_1"
+      ]
+    },
+    {
+      "case_id": "c104",
+      "family": "regression",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0.5,
+      "episode_ids": [
+        "c104_structured_0",
+        "c104_structured_1"
+      ]
+    },
+    {
+      "case_id": "c105",
+      "family": "regression",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c105_generic_0",
+        "c105_generic_1"
+      ]
+    },
+    {
+      "case_id": "c105",
+      "family": "regression",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0.5,
+      "episode_ids": [
+        "c105_structured_0",
+        "c105_structured_1"
+      ]
+    },
+    {
+      "case_id": "c110",
+      "family": "classification",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0.5,
+      "episode_ids": [
+        "c110_generic_0",
+        "c110_generic_1"
+      ]
+    },
+    {
+      "case_id": "c110",
+      "family": "classification",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0.5,
+      "episode_ids": [
+        "c110_structured_0",
+        "c110_structured_1"
+      ]
+    },
+    {
+      "case_id": "c111",
+      "family": "classification",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c111_generic_0",
+        "c111_generic_1"
+      ]
+    },
+    {
+      "case_id": "c111",
+      "family": "classification",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c111_structured_0",
+        "c111_structured_1"
+      ]
+    },
+    {
+      "case_id": "c112",
+      "family": "classification",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c112_generic_0",
+        "c112_generic_1"
+      ]
+    },
+    {
+      "case_id": "c112",
+      "family": "classification",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c112_structured_0",
+        "c112_structured_1"
+      ]
+    },
+    {
+      "case_id": "c113",
+      "family": "classification",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c113_generic_0",
+        "c113_generic_1"
+      ]
+    },
+    {
+      "case_id": "c113",
+      "family": "classification",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c113_structured_0",
+        "c113_structured_1"
+      ]
+    },
+    {
+      "case_id": "c114",
+      "family": "classification",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c114_generic_0",
+        "c114_generic_1"
+      ]
+    },
+    {
+      "case_id": "c114",
+      "family": "classification",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0.5,
+      "episode_ids": [
+        "c114_structured_0",
+        "c114_structured_1"
+      ]
+    },
+    {
+      "case_id": "c115",
+      "family": "classification",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c115_generic_0",
+        "c115_generic_1"
+      ]
+    },
+    {
+      "case_id": "c115",
+      "family": "classification",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c115_structured_0",
+        "c115_structured_1"
+      ]
+    },
+    {
+      "case_id": "c120",
+      "family": "anomaly",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c120_generic_0",
+        "c120_generic_1"
+      ]
+    },
+    {
+      "case_id": "c120",
+      "family": "anomaly",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c120_structured_0",
+        "c120_structured_1"
+      ]
+    },
+    {
+      "case_id": "c121",
+      "family": "anomaly",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c121_generic_0",
+        "c121_generic_1"
+      ]
+    },
+    {
+      "case_id": "c121",
+      "family": "anomaly",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c121_structured_0",
+        "c121_structured_1"
+      ]
+    },
+    {
+      "case_id": "c122",
+      "family": "anomaly",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c122_generic_0",
+        "c122_generic_1"
+      ]
+    },
+    {
+      "case_id": "c122",
+      "family": "anomaly",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c122_structured_0",
+        "c122_structured_1"
+      ]
+    },
+    {
+      "case_id": "c123",
+      "family": "anomaly",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c123_generic_0",
+        "c123_generic_1"
+      ]
+    },
+    {
+      "case_id": "c123",
+      "family": "anomaly",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c123_structured_0",
+        "c123_structured_1"
+      ]
+    },
+    {
+      "case_id": "c124",
+      "family": "anomaly",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0.5,
+      "episode_ids": [
+        "c124_generic_0",
+        "c124_generic_1"
+      ]
+    },
+    {
+      "case_id": "c124",
+      "family": "anomaly",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c124_structured_0",
+        "c124_structured_1"
+      ]
+    },
+    {
+      "case_id": "c125",
+      "family": "anomaly",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c125_generic_0",
+        "c125_generic_1"
+      ]
+    },
+    {
+      "case_id": "c125",
+      "family": "anomaly",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 0,
+      "episode_ids": [
+        "c125_structured_0",
+        "c125_structured_1"
+      ]
+    },
+    {
+      "case_id": "c130",
+      "family": "clustering",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c130_generic_0",
+        "c130_generic_1"
+      ]
+    },
+    {
+      "case_id": "c130",
+      "family": "clustering",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c130_structured_0",
+        "c130_structured_1"
+      ]
+    },
+    {
+      "case_id": "c131",
+      "family": "clustering",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c131_generic_0",
+        "c131_generic_1"
+      ]
+    },
+    {
+      "case_id": "c131",
+      "family": "clustering",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c131_structured_0",
+        "c131_structured_1"
+      ]
+    },
+    {
+      "case_id": "c132",
+      "family": "clustering",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c132_generic_0",
+        "c132_generic_1"
+      ]
+    },
+    {
+      "case_id": "c132",
+      "family": "clustering",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c132_structured_0",
+        "c132_structured_1"
+      ]
+    },
+    {
+      "case_id": "c133",
+      "family": "clustering",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c133_generic_0",
+        "c133_generic_1"
+      ]
+    },
+    {
+      "case_id": "c133",
+      "family": "clustering",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c133_structured_0",
+        "c133_structured_1"
+      ]
+    },
+    {
+      "case_id": "c134",
+      "family": "clustering",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c134_generic_0",
+        "c134_generic_1"
+      ]
+    },
+    {
+      "case_id": "c134",
+      "family": "clustering",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c134_structured_0",
+        "c134_structured_1"
+      ]
+    },
+    {
+      "case_id": "c135",
+      "family": "clustering",
+      "condition": "generic",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c135_generic_0",
+        "c135_generic_1"
+      ]
+    },
+    {
+      "case_id": "c135",
+      "family": "clustering",
+      "condition": "structured",
+      "expected_repeats": 2,
+      "completed_repeats": 2,
+      "pending_reviews": 0,
+      "primary_mean": 1,
+      "episode_ids": [
+        "c135_structured_0",
+        "c135_structured_1"
+      ]
+    }
+  ],
+  "review_provenance": [
+    {
+      "type": "AI",
+      "reviewer": "Codex ML implementation agent",
+      "rubric_version": "0.1.0"
+    },
+    {
+      "type": "AI",
+      "reviewer": "Codex chat implementation agent",
+      "rubric_version": "0.1.0"
+    },
+    {
+      "type": "AI",
+      "reviewer": "Codex primary agent",
+      "rubric_version": "0.1.0"
+    },
+    {
+      "type": "AI",
+      "reviewer": "Codex root, unblinded AI review of both delivered turns",
+      "rubric_version": "0.1.0"
+    }
+  ],
+  "review_policy": "Identified unblinded AI assessment; not independent human review or a human-user study. Inspect per-episode rationales.",
+  "diagnostic_policy": "Only recorded rubric checks are aggregated. Appropriate task/target is one combined check. No unreviewed next-action taxonomy is inferred.",
+  "episode_details": "records/<episode_id>.json contains response evidence, next_action, and identified review rationale; artifacts/<episode_id>/sessions/<episode_id>.json contains the recorded tool sequence."
+}
