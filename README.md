@@ -53,6 +53,10 @@ The LLM chooses from a catalog. The executor owns preprocessing, splits, fitting
 
 Each episode allows two fits, eight tool calls, six LLM responses, one repair, 4,096 generated tokens, and 180 seconds of system work. Follow-ups share limits; human pauses do not consume execution time. New tasks require explicitly starting another episode. Exhaustion is recorded rather than retried invisibly.
 
+## Vision and next direction
+
+I want this lab to be a reusable, inspectable reference for conversational ML tool use. The first pass supports the specialist interface, validated execution and recorded evidence as working components; it does not support a completion benefit from the extra planning instructions. The next proposed slice targets anomaly answer construction and follow-up comparisons, followed by task eligibility and unsupported prose claims. These are future changes requiring a new version and fresh evaluation. See [the vision, priorities and definitions of done](docs/VISION.md).
+
 ## Configuration and extension
 
 Copy `config.example.json`; launch `lab --config your-config.json chat`. Limits may be lowered. The supported backend is local Ollama, with no paid API dependency. Set `"catalog": "tutorial"` to replace Ridge with ElasticNet in chat.
