@@ -6,6 +6,14 @@ Ask a question about a numerical table. The assistant clarifies the goal, calls 
 
 **Status:** `v0.1.0`, experimental. [Get the release](https://github.com/Dolvido/llm-tool-calling-lab/releases/tag/v0.1.0) or read [the results](RESULTS.md). All four families were exercised live. Across 96 supported held-out conversations, the generic chatbot passed 33/48 and structured orchestration passed 31/48 under unblinded AI review. Anomaly conversations were particularly unreliable: 5/24 passed. This experiment did not show a completion benefit from the added planning instructions.
 
+## Inspect the experiment
+
+**Research question:** Does adding structured planning instructions improve grounded completion over a generic tool-calling chatbot with the same local model, tools, data and limits? The intervention is a prompt addition, not a trained planner. Both arms already receive safety, evidence and follow-up instructions.
+
+Start with [RESULTS.md](RESULTS.md) for outcomes and failures, then [EVALUATION.md](EVALUATION.md) for controls and scoring. Inspect [the detailed report](results/v0.1.0/REPORT.md), [diagnostic tables](results/v0.1.0/AGGREGATE.md), and [verification receipt](results/v0.1.0/verification.json). The [case study](docs/CASE_STUDY.md) connects the evidence to proposed engineering choices. [The results evidence map](RESULTS.md#inspect-the-evidence) explains how to reach raw records in the release archive; `.lab/` paths are local working paths, absent from a Git checkout.
+
+The evaluation unit is a two-turn episode; the dataset-level comparison has 24 synthetic held-out datasets with two repeats per arm. Repeats reuse sampling seed 0 and temperature 0. Fixed specialist runs are separate model-quality references. Completion combines structural validation with unblinded implementation-agent AI judgments; it is not a human study or a significance test.
+
 ## Supported work
 
 | Task | Methods | Evidence available to the chatbot |

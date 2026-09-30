@@ -63,6 +63,24 @@ The scored campaign is frozen at source commit `6495a339fdfe1b02140540b49257bf0f
 
 The [detailed report](results/v0.1.0/REPORT.md) and [aggregate tables](results/v0.1.0/AGGREGATE.md) provide the full breakdown. Evidence download location: [v0.1.0 GitHub release assets](https://github.com/Dolvido/llm-tool-calling-lab/releases/tag/v0.1.0). The campaign export contains synthetic fixtures, transcripts, results, evaluator-only truth and scoring records, and review provenance; model binaries are excluded. Local absolute paths are scrubbed, original and exported file hashes are recorded, and CSV bytes are preserved. Frozen source and the earlier failed campaign are separate assets.
 
+## Inspect the evidence
+
+GitHub navigation: [protocol](EVALUATION.md) → [full report](results/v0.1.0/REPORT.md) → [diagnostics](results/v0.1.0/AGGREGATE.md) → [machine-readable summary](results/v0.1.0/summary.json) → a raw episode in the release archive. The summary includes the frozen manifest and per-record completion; it is not a substitute for the transcript or review rationale.
+
+| Claim to inspect | Repository-relative evidence | Raw evidence inside `v0.1.0-evaluation-evidence.zip` |
+|---|---|---|
+| 33/48 generic; 31/48 structured; 5/24 anomaly | `results/v0.1.0/REPORT.md`, `results/v0.1.0/summary.json`; scoring in `src/llm_tool_calling_lab/evaluation.py` | `records/*.json`: `machine.pass` AND all applicable `review.checks`; structural failure stays zero |
+| Same model/tools/caps; prompt addition | Manifest in `results/v0.1.0/summary.json`; `src/llm_tool_calling_lab/chat.py`, `src/llm_tool_calling_lab/backend.py`, `src/llm_tool_calling_lab/catalog.py` | `manifest.json`, `artifacts/<episode>/sessions/<episode>.json` |
+| Fitted output can fail the follow-up | Diagnostic counts in `results/v0.1.0/AGGREGATE.md` | `records/c122_generic_1.json`; `artifacts/c122_generic_1/sessions/c122_generic_1.json`; run results below |
+| Held-out separation and frozen source | `src/llm_tool_calling_lab/fixtures.py`, `src/llm_tool_calling_lab/models.py`, `src/llm_tool_calling_lab/data.py`; `results/v0.1.0/verification.json` | `fixtures/cases.json`, `manifest.json`, run `private.json` and `result.json`, `CAMPAIGN_PROVENANCE.json` |
+| Bounded integrity verification | `results/v0.1.0/integrity-audit-part1.json`, `results/v0.1.0/integrity-audit-part2.json`, `results/v0.1.0/verification.json` | Stored artifacts; audits did not independently recompute every model metric |
+
+For `c122_generic_1`, both `artifacts/c122_generic_1/runs/run_97c2f9c4cacf4050a7a48a2c98e05de8/result.json` (Isolation Forest) and `artifacts/c122_generic_1/runs/run_0a2a525e73e34af794fc39453de6365b/result.json` (LOF) show successful fits. The follow-up cites only the first ranking; the recorded AI review marks `relevant_followup` false despite a structural pass. This is a concrete failure example, not proof of its cause or a tested remedy.
+
+Download the named archives and `SHA256SUMS.txt` from [the release assets](https://github.com/Dolvido/llm-tool-calling-lab/releases/tag/v0.1.0). Verify the checksum before unpacking. `v0.1.0-evaluated-source.zip` preserves evaluated source; `v0.1-startup-failure-source.zip` and `v0.1-startup-failure-evidence.zip` preserve the failed launch; `v0.1-development-evidence.zip` contains the operational demos. Archive paths above start at the extracted archive root. `.lab/`, `dist/` and `presentation/` are ignored local directories, so their working links cannot serve as GitHub evidence links. No current remote availability was rechecked in this documentation audit.
+
+The comparison is descriptive: structured completion is two episodes lower (4.2 percentage points), with repeat-averaged dataset outcomes of one structured win, three generic wins, fifteen nonzero ties and five both-zero ties. Repeats use the same sampling seed; the generic arm already has extensive shared guidance. The fresh replacement changes data and initial-question assignment together, and is not comparable to the zero-inference launch as a performance intervention. These constraints prevent a general causal, significance, novelty or superiority claim.
+
 ## Proposed next work
 
 These are future engineering and evaluation priorities, not fixes implemented in this release:

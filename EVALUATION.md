@@ -22,6 +22,18 @@ Both LLM conditions must use the same model version, sampling settings, per-epis
 
 The shared engine enforces data separation in both conditions. The experiment tests the additional planning workflow rather than comparing safe tooling with an unconstrained system. Differences in prompts and control flow must be published.
 
+### Implemented controls and limits of the comparison
+
+Inspect `COMMON_PROMPT`, `STRUCTURED_PROMPT` and `Session` in [chat.py](src/llm_tool_calling_lab/chat.py). Generic already includes task eligibility, evidence, limitations and follow-up guidance; structured appends planning instructions to that common prompt. Both use the same session engine and catalog. [backend.py](src/llm_tool_calling_lab/backend.py) supplies the shared sampling settings. The frozen manifest, also embedded in [summary.json](results/v0.1.0/summary.json), records model digest `bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8`, temperature 0 and sampling seed 0. Repeat indices do not change that seed. Repeats measure repeated execution under these settings, not independent random draws.
+
+Budgets are equal caps, not equal realized usage or equal prompt lengths. The planning addition changes input length, and the runner executes reference, generic, then structured within a case rather than randomizing order. Local latency is therefore descriptive, not an isolated causal speed comparison. Fixed references receive the intended family and use one predetermined method; the LLMs may fit two methods. Reference model-quality differences include method-selection and fit-count differences, not just conversational intelligence.
+
+The two campaign source snapshots differ only in `evaluation.py` path resolution and `fixtures.py` seed-offset support. Offset 100000 changes numerical data **and seeded initial-question variant assignment**; it does not change the question-variant pool or index-based follow-up assignment. The failed launch produced no LLM inference. It is not a before/after performance comparison. Fresh seeds reduce direct reuse, but use the same known generator families and do not establish externally hidden evaluation data.
+
+The saved rubric is version 0.1.0 with five supported checks and three challenge checks, defined in [evaluation.py](src/llm_tool_calling_lab/evaluation.py). Review histories identify AI reviewers, timestamps, boolean checks and rationale. Structural failures score zero without needing a qualitative review: 26 of the 136 LLM records have no review because they failed structurally; zero structurally successful episodes await review. Scores can vary with unblinded reviewer interpretation. No independent adjudication, inter-rater reliability, or registered external protocol is established.
+
+Source and fixture hashes can be checked without inference. Saved installation and backend receipts support the evaluated environment; this documentation review does not recheck an installed model or package environment. See [the evidence map](RESULTS.md#inspect-the-evidence) for archive paths and source snapshots.
+
 ## Cases and counts
 
 Target four families, with two development datasets and six held-out datasets per family: 8 development plus 24 held-out datasets. Each held-out dataset has a predetermined question and one follow-up. Each of the two LLM conditions repeats the entire episode twice.
