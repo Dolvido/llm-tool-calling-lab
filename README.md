@@ -6,6 +6,18 @@ Ask a question about a numerical table. The assistant clarifies the goal, calls 
 
 **Status:** `v0.1.0`, experimental. [Get the release](https://github.com/Dolvido/llm-tool-calling-lab/releases/tag/v0.1.0) or read [the results](RESULTS.md). All four families were exercised live. Across 96 supported held-out conversations, the generic chatbot passed 33/48 and structured orchestration passed 31/48 under unblinded AI review. Anomaly conversations were particularly unreliable: 5/24 passed. This experiment did not show a completion benefit from the added planning instructions.
 
+## See the local app
+
+These screenshots show the included synthetic regression example in a separate post-release demonstration, excluded from the frozen benchmark. They are the same images used in [the portfolio walkthrough](https://lukepayne.web.app/lab/llm-tool-calling-lab-first-release/).
+
+![Local chatbot answering a numerical prediction question, with recorded Random Forest validation MAE and the constant baseline displayed below the answer.](docs/images/01-question-and-evidence.png)
+
+*Question → fitted model → recorded evidence.* Random Forest validation MAE is **0.7686**, versus **3.0326** for the training-median baseline. The displayed answer's “significantly better” and “no further action needed” claims are unsupported; successful fitting does not establish careful interpretation or readiness for real data.
+
+![Follow-up comparing Random Forest and Ridge, with both stored validation results and the shared episode usage visible.](docs/images/02-follow-up-comparison.png)
+
+*Follow-up → second method → comparison within the same budget.* Ridge validation MAE is **0.1420** on the same partition, and the answer prefers its lower validation error. The episode used two fits, three tool calls and five model responses. Its “no further action needed” statement remains a limitation. This one demonstration does not establish general superiority.
+
 ## Inspect the experiment
 
 **Research question:** Does adding structured planning instructions improve grounded completion over a generic tool-calling chatbot with the same local model, tools, data and limits? The intervention is a prompt addition, not a trained planner. Both arms already receive safety, evidence and follow-up instructions.
